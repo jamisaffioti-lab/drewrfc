@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drew Rugby Football Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --oxford:      #002147;
+      --oxford-dark: #001530;
+      --oxford-mid:  #002d63;
+      --green:       #195905;
+      --green-dark:  #0f3803;
+      --yellow:      #f5d20a;
+      --yellow-soft: #f5e882;
+      --white:       #ffffff;
+      --off-white:   #f4f4f2;
+      --text-dark:   #111111;
+      --text-mid:    #444444;
+      --text-light:  #777777;
+      --border:      #dddddd;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--off-white);
+      color: var(--text-dark);
+    }
+
+    /* ── NAVIGATION ─────────────────────────────────────────── */
+    nav {
+      background: var(--oxford-dark);
+      border-bottom: 3px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 68px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .nav-wordmark {
+      color: var(--white);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+
+    .nav-wordmark span { color: var(--yellow); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0 16px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -3px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--white);
+      border-bottom-color: var(--yellow);
+    }
+
+    /* ── HERO ───────────────────────────────────────────────── */
+    .hero {
+      background: var(--oxford);
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 3rem 2rem;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 7px;
+      background: var(--green);
+    }
+    .hero::before { left: 0; }
+    .hero::after  { right: 0; }
+
+    .hero-bg-crest {
+      position: absolute;
+      right: -20px;
+      bottom: -30px;
+      width: 420px;
+      height: 420px;
+      opacity: 0.09;
+      pointer-events: none;
+    }
+
+    .hero-bg-crest img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 620px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--green);
+      color: var(--yellow);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 18px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 72px;
+      line-height: 0.95;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span { color: var(--yellow); }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.55);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      padding: 13px 28px;
+      font-family: 'Lato', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--green-dark); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--yellow);
+      border: 2px solid var(--yellow);
+      padding: 11px 28px;
+      font-family: 'Lato', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-outline:hover {
+      background: var(--yellow);
+      color: var(--oxford-dark);
+    }
+
+    /* ── CREST BAND ─────────────────────────────────────────── */
+    .crest-band {
+      background: var(--oxford-mid);
+      border-bottom: 3px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 2rem;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .crest-band img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .crest-band-text {
+      color: rgba(255,255,255,0.45);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    .crest-band-divider {
+      width: 1px;
+      height: 26px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* ── STATS BAR ──────────────────────────────────────────── */
+    .stats-bar {
+      background: var(--green);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      padding: 20px 44px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      color: var(--yellow);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: rgba(255,255,255,0.7);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    /* ── MAIN CONTENT ───────────────────────────────────────── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.06em;
+      color: var(--oxford);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--oxford);
+      border-radius: 5px;
+      padding: 1.5rem;
+    }
+
+    .card.green-top  { border-top-color: var(--green); }
+    .card.yellow-top { border-top-color: var(--yellow); }
+
+    .card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      color: var(--oxford);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Timeline */
+    .timeline-section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--oxford);
+      border-radius: 5px;
+      padding: 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .timeline-item:first-child { padding-top: 0; }
+    .timeline-item:last-child  { border-bottom: none; padding-bottom: 0; }
+
+    .timeline-year {
+      min-width: 60px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.06em;
+      color: var(--oxford);
+      padding-top: 2px;
+    }
+
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--yellow);
+      border: 2px solid var(--green);
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    .timeline-text {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Hall of Fame */
+    .hof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .hof-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: border-color 0.15s;
+    }
+
+    .hof-card:hover { border-color: var(--oxford); }
+
+    .hof-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--oxford);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--yellow);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+    }
+
+    .hof-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .hof-detail {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 3px;
+    }
+
+    /* Current Season placeholder */
+    .season-placeholder {
+      background: var(--white);
+      border: 1px dashed var(--border);
+      border-radius: 5px;
+      padding: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .season-placeholder p {
+      color: var(--text-light);
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: var(--oxford-dark);
+      border-top: 4px solid var(--green);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .footer-logo img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .footer-logo span {
+      color: rgba(255,255,255,0.4);
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    .footer-tagline {
+      color: var(--yellow);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      opacity: 0.8;
+    }
+
+    .footer-copy {
+      color: rgba(255,255,255,0.25);
+      font-size: 11px;
+      width: 100%;
+      text-align: center;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; height: auto; flex-wrap: wrap; padding-top: 12px; }
+      .nav-links { overflow-x: auto; width: 100%; padding-bottom: 4px; }
+      .nav-links a { padding: 10px 12px; height: auto; font-size: 11px; }
+      .hero h1 { font-size: 52px; }
+      .card-grid, .hof-grid { grid-template-columns: 1fr; }
+      .stat { padding: 16px 24px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home" class="nav-logo">
+      <!-- Replace src below with path to your transparent-background crest PNG -->
+      <img src="drfc-crest.png" alt="Drew RFC Skull and Rose Crest" />
+      <div class="nav-wordmark">Drew <span>RFC</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#history">History</a>
+      <a href="#year-by-year">Year by Year</a>
+      <a href="#photos">Photos</a>
+      <a href="#season">Current Season</a>
+      <a href="#hof">Hall of Fame</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-crest" aria-hidden="true">
+      <img src="drfc-crest.png" alt="" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Drew University &middot; Madison, NJ &middot; Est. 1963</div>
+      <h1>Drew Rugby<br><span>Football Club</span></h1>
+      <p class="hero-sub">A legacy of excellence &mdash; D-III champions who competed with and defeated the best D-I programs in the northeast.</p>
+      <div class="hero-btns">
+        <a href="#history" class="btn-primary">Explore Our History</a>
+        <a href="#season" class="btn-outline">Revive the Club</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREST BAND -->
+  <div class="crest-band">
+    <img src="drfc-crest.png" alt="Drew RFC Crest" />
+    <div class="crest-band-divider"></div>
+    <div class="crest-band-text">Drew Rugby Football Club</div>
+    <div class="crest-band-divider"></div>
+    <div class="crest-band-text">Est. 1963</div>
+    <div class="crest-band-divider"></div>
+    <div class="crest-band-text">Madison, New Jersey</div>
+    <div class="crest-band-divider"></div>
+    <img src="drfc-crest.png" alt="" aria-hidden="true" />
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">1963</div>
+      <div class="stat-label">Founded</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">D-I</div>
+      <div class="stat-label">Opponents Beaten</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">60+</div>
+      <div class="stat-label">Years of History</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">NE</div>
+      <div class="stat-label">Powerhouse</div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- ABOUT CARDS -->
+    <div class="section-label">The Club</div>
+    <div class="section-title">What Made DRFC Legendary</div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Championship Pedigree</h3>
+        <p>A D-III program that consistently outperformed top D-I programs across the northeast &mdash; a rare and storied achievement in collegiate rugby.</p>
+      </div>
+      <div class="card green-top">
+        <h3>Alumni Community</h3>
+        <p>Hundreds of former players bound by the pitch, the jersey, and a brotherhood forged through elite competition and shared sacrifice.</p>
+      </div>
+      <div class="card yellow-top">
+        <h3>The Road Back</h3>
+        <p>Alumni are working to resurrect DRFC. If you&rsquo;re a current Drew student interested in playing, we want to hear from you.</p>
+      </div>
+    </div>
+
+    <!-- HISTORY TIMELINE -->
+    <div id="history">
+      <div class="section-label">History</div>
+      <div class="section-title">The DRFC Story</div>
+    </div>
+    <div class="timeline-section">
+      <div class="timeline-item">
+        <div class="timeline-year">1963</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-text">Drew Rugby Football Club is formed as a men&rsquo;s rugby team at Drew University in Madison, NJ &mdash; planting the roots of what would grow into one of the northeast&rsquo;s most respected programs.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1971</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-text">DRFC becomes an officially recognized student club at Drew University and joins full USA Rugby Union intercollegiate competition, traveling to matches and tournaments across the Atlantic Seaboard.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Peak Era</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-text">DRFC reaches its competitive peak, defeating D-I opponents and earning national recognition despite competing at the D-III level. The club becomes a powerhouse of northeast collegiate rugby.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Legacy</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-text">The club ceases operations, but the alumni network remains active and proud. Efforts are now underway to bring rugby back to Drew University and restore the club to its former glory.</div>
+      </div>
+    </div>
+
+    <!-- YEAR BY YEAR -->
+    <div id="year-by-year">
+      <div class="section-label">Year by Year</div>
+      <div class="section-title">Season Records &amp; Rosters</div>
+    </div>
+    <div class="season-placeholder">
+      <p>Season-by-season records, rosters, and leadership &mdash; coming soon as alumni contribute historical data.</p>
+    </div>
+
+    <!-- PHOTOS -->
+    <div id="photos">
+      <div class="section-label">Photos</div>
+      <div class="section-title">Through the Years</div>
+    </div>
+    <div class="season-placeholder">
+      <p>Photo galleries by season &mdash; coming soon. Alumni are encouraged to submit photos to be featured here.</p>
+    </div>
+
+    <!-- CURRENT SEASON -->
+    <div id="season">
+      <div class="section-label">Current Season</div>
+      <div class="section-title">Revive the Club</div>
+    </div>
+    <div class="season-placeholder">
+      <p>No active season at this time. Interested in bringing DRFC back to Drew University? Reach out to the alumni network &mdash; we want to hear from you.</p>
+    </div>
+
+    <!-- HALL OF FAME -->
+    <div id="hof">
+      <div class="section-label">Hall of Fame</div>
+      <div class="section-title">Inductees</div>
+    </div>
+    <div class="hof-grid">
+      <div class="hof-card">
+        <div class="hof-avatar">JD</div>
+        <div>
+          <div class="hof-name">James D.</div>
+          <div class="hof-detail">Flanker &middot; Class of &rsquo;94</div>
+        </div>
+      </div>
+      <div class="hof-card">
+        <div class="hof-avatar">MR</div>
+        <div>
+          <div class="hof-name">Mike R.</div>
+          <div class="hof-detail">Fly-half &middot; Class of &rsquo;98</div>
+        </div>
+      </div>
+      <div class="hof-card">
+        <div class="hof-avatar">TC</div>
+        <div>
+          <div class="hof-name">Tom C.</div>
+          <div class="hof-detail">Prop &middot; Class of &rsquo;01</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#home" class="footer-logo">
+      <img src="drfc-crest.png" alt="Drew RFC" />
+      <span>Drew Rugby Football Club &middot; Est. 1963 &middot; Madison, NJ</span>
+    </a>
+    <div class="footer-tagline">Forged at Drew, Proven Everywhere.</div>
+    <div class="footer-copy">&copy; Drew Rugby Football Club Alumni. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

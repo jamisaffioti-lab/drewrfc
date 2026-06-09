@@ -209,6 +209,10 @@
       max-height: 400px;
       display: block;
     }
+    .photo-cover img {
+      object-fit: cover;
+      height: 280px;
+    }
     @media (max-width: 768px) {
       .photo-grid { grid-template-columns: 1fr; }
     }
@@ -539,10 +543,10 @@
       <div class="photo-card">
         <img src="drfc-team-photo-0.jpeg" alt="Drew Rugby Football Club historical photo" />
       </div>
-      <div class="photo-card">
+      <div class="photo-card photo-cover">
         <img src="drfc-team-photo-1.jpeg" alt="Drew Rugby Football Club historical team photo" />
       </div>
-      <div class="photo-card">
+      <div class="photo-card photo-cover">
         <img src="tee shirt source and drawing ca 1977.jpg" alt="Drew RFC tee shirt source and drawing circa 1977" />
       </div>
     </div>

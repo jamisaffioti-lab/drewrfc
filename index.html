@@ -205,13 +205,14 @@
     }
     .photo-card img {
       width: 100%;
-      height: auto;
-      max-height: 400px;
+      height: 280px;
+      object-fit: cover;
+      object-position: center top;
       display: block;
     }
-    .photo-cover img {
-      object-fit: cover;
-      height: 280px;
+    .photo-card.natural img {
+      height: auto;
+      object-fit: unset;
     }
     @media (max-width: 768px) {
       .photo-grid { grid-template-columns: 1fr; }
@@ -540,13 +541,13 @@
       <div class="section-title">Through the Years</div>
     </div>
     <div class="photo-grid">
-      <div class="photo-card photo-cover">
+      <div class="photo-card">
         <img src="drfc-team-photo-0.jpeg" alt="Drew Rugby Football Club historical photo" />
       </div>
-      <div class="photo-card photo-cover">
+      <div class="photo-card">
         <img src="drfc-team-photo-1.jpeg" alt="Drew Rugby Football Club historical team photo" />
       </div>
-      <div class="photo-card">
+      <div class="photo-card natural">
         <img src="tee shirt source and drawing ca 1977.jpg" alt="Drew RFC tee shirt source and drawing circa 1977" />
       </div>
     </div>

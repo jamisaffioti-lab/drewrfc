@@ -264,6 +264,51 @@
     .hof-bio p:last-child { margin-bottom: 0; }
     .hof-bio strong { color: var(--oxford); font-weight: 700; }
 
+    .hof-accordion { margin-bottom: 3rem; }
+
+    .hof-year {
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    
+    .hof-year-toggle {
+      width: 100%;
+      background: var(--oxford);
+      color: var(--white);
+      border: none;
+      padding: 1rem 1.5rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.15s;
+    }
+    
+    .hof-year-toggle:hover { background: var(--oxford-mid); }
+    
+    .hof-chevron {
+      font-size: 12px;
+      transition: transform 0.25s;
+      transform: rotate(180deg);
+    }
+    
+    .hof-year-toggle.open .hof-chevron {
+      transform: rotate(0deg);
+    }
+    
+    .hof-year-content {
+      padding: 1.5rem;
+      background: var(--off-white);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
     /* RECRUITMENT */
     .recruit-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 2.5rem; }
     .recruit-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--oxford); border-radius: 5px; padding: 1.5rem; }
@@ -575,61 +620,173 @@
       </p>
     </div>
     
-    <div class="hof-grid">
+    <div class="hof-accordion">
     
-      <div class="hof-card hof-card-full">
-        <div class="hof-header">
-          <div class="hof-avatar">
-            <img src="Bernard-photo.png" alt="Bill Bernhard" />
+      <!-- 2026 -->
+      <div class="hof-year">
+        <button class="hof-year-toggle open" onclick="toggleYear(this)">
+          <span>2026 Inductees</span>
+          <span class="hof-chevron">&#9650;</span>
+        </button>
+        <div class="hof-year-content">
+    
+          <div class="hof-card hof-card-full">
+            <div class="hof-header">
+              <div class="hof-avatar"><img src="martin-photo.png" alt="Keith Martin" /></div>
+              <div>
+                <div class="hof-name">Keith Martin</div>
+                <div class="hof-detail">Prop &middot; 8-Man &middot; Class of &rsquo;80</div>
+                <div class="hof-date">DRFC HoF 2026</div>
+              </div>
+            </div>
+            <div class="hof-bio">
+              <p>Keith Martin attended Drew University from 1976 through 1980, majoring in History and Political Science. His introduction to rugby came on his very first day at Drew, when Warren Paul C&rsquo;78 invited him into the UC Pub, introduced him to the upper-class rugby players, and convinced him to come to practice the very next day &mdash; without a uniform or equipment. He was put in at A side prop and learned the game on the fly.</p>
+              <p>Keith played prop and wing forward his first two years before studying in London in the fall of his junior year, where he played for the Sudbury North Wembley Wasps and received extensive training at the 8-man position. Upon returning to Drew, he applied those skills alongside his talented teammates to accumulate impressive statistics over his final two seasons.</p>
+              <p>The most memorable season for Keith was the <strong>1978&ndash;1979 team, which shut out every college team they faced</strong>. After Drew, Keith went on to Delaware Law School and has been a practicing attorney in Philadelphia since 1983. He is honored to share this induction with his wife, Anne.</p>
+            </div>
           </div>
-          <div>
-            <div class="hof-name">Bill Bernhard</div>
-            <div class="hof-detail">Fullback &middot; Class of &rsquo;82 &middot; 3&times; MVP &middot; USA Eagles</div>
-            <div class="hof-date">DRFC HoF 2022</div>
+    
+          <div class="hof-card hof-card-full">
+            <div class="hof-header">
+              <div class="hof-avatar"><img src="boyer-photo.png" alt="Dan Boyer" /></div>
+              <div>
+                <div class="hof-name">Dan Boyer</div>
+                <div class="hof-detail">Fullback &middot; Class of &rsquo;69 &middot; P&rsquo;04</div>
+                <div class="hof-date">DRFC HoF 2026</div>
+              </div>
+            </div>
+            <div class="hof-bio">
+              <p>Dan Boyer came to Drew in 1965 knowing nothing about rugby other than it was played with a &ldquo;fat football.&rdquo; He attended his first practice in spring 1966 and quickly became a committed rugger, his development shaped largely by fellow inductee John Hinchcliff (DRFC HoF 2022), who taught the young team how to play the game the New Zealand way.</p>
+              <p>After playing various positions, Dan settled at fullback for most of his Drew career. A standout moment came at the <strong>Thanksgiving Sevens Tournament on Randalls Island (NYC) in 1967</strong>, where DRFC &mdash; with no sevens experience &mdash; surprised opponents and won three games to reach the quarterfinals. Dan and Dwight Davies (DRFC HoF 2024) were elected co-captains for the 1968&ndash;69 season, and their capstone achievement was a win over Princeton in spring 1969 to capture the <strong>Schaeffer Cup for the first time</strong>.</p>
+              <p>Dan continued playing at Syracuse during grad school, returned to the pitch in 1975 while working at Drew, and played several more seasons before hanging up his boots. The friendships forged with his teammates are what have endured most to this day.</p>
+            </div>
           </div>
-        </div>
-        <div class="hof-bio">
-          <p>Bill Bernhard played Fullback for Drew Rugby from 1978 to 1981, earning MVP in 1979, 1980, and 1981, and serving as team captain in 1981. In March 1982, he toured England and Ireland with Montclair &ldquo;Face-Crushers&rdquo; RFC.</p>
-          <p>From 1982 to 1984, Bill played for the Long Island RFC, serving as team captain in 1983, before joining the Washington Rugby Club until 1990 where he was MVP in 1985 and helped make WRFC Potomac Union Rugby Champions from 1984&ndash;1990. He earned selection to the Potomac Rugby Union Select Side and Eastern Rugby Union Select Side as Fullback from 1985&ndash;1989.</p>
-          <p>Bill reached the pinnacle of the sport when he was selected for the <strong>USA Eagles</strong> in February 1987. He was unfortunately injured and unable to compete for the Rugby World Cup Team in Australia, but returned to represent the Atlantis Select Side 7&rsquo;s Team on tour in Scotland in fall 1988.</p>
+    
+          <div class="hof-card hof-card-full">
+            <div class="hof-header">
+              <div class="hof-avatar"><img src="kaeuper-photo.png" alt="Eric Kaeuper" /></div>
+              <div>
+                <div class="hof-name">Eric Kaeuper</div>
+                <div class="hof-detail">Prop &middot; Class of &rsquo;03</div>
+                <div class="hof-date">DRFC HoF 2026</div>
+              </div>
+            </div>
+            <div class="hof-bio">
+              <p>Eric Kaeuper&rsquo;s introduction to rugby came in middle school in Denver, Colorado, when an Australian teacher gifted him a video of the 1995 Rugby World Cup final &mdash; a moment that sparked a lifelong fascination with the sport. He arrived at Drew intending to play baseball for the Rangers, but after not making the team he found his path with the Drew rugby squad. Starting as a lock, Eric transitioned to the front row, playing both tighthead and loosehead prop during his final two years.</p>
+              <p>After graduating, Eric took a hiatus until fellow Drew alumni Ryan Meiller C&rsquo;05 and Michael Wieners C&rsquo;04 recruited him to the Princeton Athletic Club Rugby. He declared himself a back and moved to center, showcasing versatility by playing all along the back row for both A and B sides. With PAC 7s he returned to the front row, playing prop while handling much of the kicking duties, before retiring from competitive rugby in 2010.</p>
+              <p>Eric now resides in Garwood, New Jersey, with his wife Heather and her two now-grown children, Brooke and Ethan.</p>
+            </div>
+          </div>
+    
+          <div class="hof-card hof-card-full">
+            <div class="hof-header">
+              <div class="hof-avatar"><img src="kuhar-photo.png" alt="Rebecca Kuhar" /></div>
+              <div>
+                <div class="hof-name">Rebecca Kuhar</div>
+                <div class="hof-detail">Wing &middot; Class of &rsquo;96 &middot; DWRFC</div>
+                <div class="hof-date">DRFC HoF 2026</div>
+              </div>
+            </div>
+            <div class="hof-bio">
+              <p>Rebecca &ldquo;Happy Hour&rdquo; (Morris) Kuhar arrived on the Drew campus in 1992 and was quickly attracted to the nascent Drew Women&rsquo;s Football Club, formed in the spring of 1991. She played all four years, almost always at outside or wing, and scored one of the team&rsquo;s early tries &mdash; a memorable run up the outside of the field that may or may not have been contested, but which she recalls vividly to this day.</p>
+              <p>Rebecca has remained deeply engaged with the DWRFC, supporting the 2025 annual game and enlisting current and recent members of the women&rsquo;s team to keep the tradition alive &mdash; including organizing a successful co-ed touch game in 2025 when the men&rsquo;s team couldn&rsquo;t field enough players on their own.</p>
+              <p>Off the pitch, Rebecca majored in economics with a business management minor and received her Master of Public Administration from Columbia University&rsquo;s SIPA. She lives in Midtown Manhattan and works at J.P. Morgan. She serves on the Drew University College Alumni Association Board and mentors Drew students on the Wall Street Semester, crediting her formative years at Drew &mdash; including semesters abroad in Egypt and Brussels &mdash; as instrumental to her career in public policy.</p>
+            </div>
+          </div>
+    
         </div>
       </div>
     
-      <div class="hof-card hof-card-full">
-        <div class="hof-header">
-          <div class="hof-avatar" id="clarke-avatar">
-            <img src="Clarke-photo.png" alt="Don Clarke" />
-          </div>
-          <div>
-            <div class="hof-name">Don Clarke</div>
-            <div class="hof-detail">Number 8 &middot; Class of &rsquo;72 &middot; Potomac Union Select Side</div>
-            <div class="hof-date">DRFC HoF 2022</div>
-          </div>
-        </div>
-        <div class="hof-bio">
-          <p>Don Clarke played every Drew A game from his first semester in fall 1965 through spring 1968, before joining the Army and Helicopter Flight School, serving one tour in Vietnam as a <strong>Cobra Pilot in the Air Cavalry</strong>. He re-enrolled at Drew in January 1971 and played every A game through his graduation with a BA in Political Science in spring 1972.</p>
-          <p>In 1974 Don co-founded the Princeton Athletic Club, playing A side #8 through 1975. He then moved to Washington, DC and played #8 for Sud Americano A&rsquo;s from 1975&ndash;1980, earning selection to the Potomac Rugby Union Select Side as #8 in 1979. He retired from the pitch in 1980, ran marathons for three years, and returned for one final season with the LA Rugby Club &ldquo;Lunchtime Legends&rdquo; old boys team in 1990.</p>
-          <p>With the exception of his first two years at Drew &mdash; where fellow inductee John Hinchcliff held the #8 position &mdash; Don always played #8 and took all penalty kicks. He was likely the leading scorer at Drew during his nine seasons and the second-leading scorer at Princeton Athletic Club.</p>
+      <!-- 2025 placeholder -->
+      <div class="hof-year">
+        <button class="hof-year-toggle" onclick="toggleYear(this)">
+          <span>2025 Inductees</span>
+          <span class="hof-chevron">&#9650;</span>
+        </button>
+        <div class="hof-year-content" style="display:none;">
+          <p style="padding:1rem; color:var(--text-light); font-style:italic; font-size:14px;">Coming soon.</p>
         </div>
       </div>
     
-      <div class="hof-card hof-card-full">
-        <div class="hof-header">
-          <div class="hof-avatar">
-            <img src="Hinchcliff-photo.png" alt="John Hinchcliff" />
-          </div>
-          <div>
-            <div class="hof-name">John Hinchcliff</div>
-            <div class="hof-detail">Loose Forward &middot; Class of &rsquo;69 &middot; New Zealand</div>
-            <div class="hof-date">DRFC HoF 2022</div>
-          </div>
+      <!-- 2024 placeholder -->
+      <div class="hof-year">
+        <button class="hof-year-toggle" onclick="toggleYear(this)">
+          <span>2024 Inductees</span>
+          <span class="hof-chevron">&#9650;</span>
+        </button>
+        <div class="hof-year-content" style="display:none;">
+          <p style="padding:1rem; color:var(--text-light); font-style:italic; font-size:14px;">Coming soon.</p>
         </div>
-        <div class="hof-bio">
-          <p>John Hinchcliff began playing rugby as a nine-year-old in New Zealand. At Nelson College his commitment deepened, and at Canterbury University (1959&ndash;61) he played mostly loose forward at one of New Zealand&rsquo;s finest programs.</p>
-          <p>A Rotary scholarship brought John to Israel, and later a Doctorate program brought him to Drew &mdash; which he described as a <em>&ldquo;pleasant, friendly and caring campus.&rdquo;</em> His memories of Drew rugby center on a group of committed players who became a strong platform to develop a fine team. John brought with him the rugby culture and traditions of New Zealand, helping shape the identity of the early DRFC.</p>
-          <p>After Drew, John taught Philosophy at Hampden-Sydney College in Virginia, where he found a similarly small and dedicated group of rugby enthusiasts. He remains an admirer of the game from, as he puts it, <em>&ldquo;the comfort of my armchair.&rdquo;</em></p>
-          <img src="Hinchcliff-team-photo.png" alt="John Hinchcliff with Drew RFC team" 
-          style="width:100%; max-width:400px; height:auto; margin-top:1rem; border-radius:4px;" />
+      </div>
+    
+      <!-- 2023 placeholder -->
+      <div class="hof-year">
+        <button class="hof-year-toggle" onclick="toggleYear(this)">
+          <span>2023 Inductees</span>
+          <span class="hof-chevron">&#9650;</span>
+        </button>
+        <div class="hof-year-content" style="display:none;">
+          <p style="padding:1rem; color:var(--text-light); font-style:italic; font-size:14px;">Coming soon.</p>
+        </div>
+      </div>
+    
+      <!-- 2022 -->
+      <div class="hof-year">
+        <button class="hof-year-toggle" onclick="toggleYear(this)">
+          <span>2022 Inductees</span>
+          <span class="hof-chevron">&#9650;</span>
+        </button>
+        <div class="hof-year-content" style="display:none;">
+    
+          <div class="hof-card hof-card-full">
+            <div class="hof-header">
+              <div class="hof-avatar"><img src="Bernard-photo.png" alt="Bill Bernhard" /></div>
+              <div>
+                <div class="hof-name">Bill Bernhard</div>
+                <div class="hof-detail">Fullback &middot; Class of &rsquo;82 &middot; 3&times; MVP &middot; USA Eagles</div>
+                <div class="hof-date">DRFC HoF 2022</div>
+              </div>
+            </div>
+            <div class="hof-bio">
+              <p>Bill Bernhard played Fullback for Drew Rugby from 1978 to 1981, earning MVP in 1979, 1980, and 1981, and serving as team captain in 1981. In March 1982, he toured England and Ireland with Montclair &ldquo;Face-Crushers&rdquo; RFC.</p>
+              <p>From 1982 to 1984, Bill played for the Long Island RFC, serving as team captain in 1983, before joining the Washington Rugby Club until 1990 where he was MVP in 1985 and helped make WRFC Potomac Union Rugby Champions from 1984&ndash;1990. He earned selection to the Potomac Rugby Union Select Side and Eastern Rugby Union Select Side as Fullback from 1985&ndash;1989.</p>
+              <p>Bill reached the pinnacle of the sport when he was selected for the <strong>USA Eagles</strong> in February 1987. He was unfortunately injured and unable to compete for the Rugby World Cup Team in Australia, but returned to represent the Atlantis Select Side 7&rsquo;s Team on tour in Scotland in fall 1988.</p>
+            </div>
+          </div>
+    
+          <div class="hof-card hof-card-full">
+            <div class="hof-header">
+              <div class="hof-avatar" id="clarke-avatar"><img src="Clarke-photo.png" alt="Don Clarke" /></div>
+              <div>
+                <div class="hof-name">Don Clarke</div>
+                <div class="hof-detail">Number 8 &middot; Class of &rsquo;72 &middot; Potomac Union Select Side</div>
+                <div class="hof-date">DRFC HoF 2022</div>
+              </div>
+            </div>
+            <div class="hof-bio">
+              <p>Don Clarke played every Drew A game from his first semester in fall 1965 through spring 1968, before joining the Army and Helicopter Flight School, serving one tour in Vietnam as a <strong>Cobra Pilot in the Air Cavalry</strong>. He re-enrolled at Drew in January 1971 and played every A game through his graduation with a BA in Political Science in spring 1972.</p>
+              <p>In 1974 Don co-founded the Princeton Athletic Club, playing A side #8 through 1975. He then moved to Washington, DC and played #8 for Sud Americano A&rsquo;s from 1975&ndash;1980, earning selection to the Potomac Rugby Union Select Side as #8 in 1979. He retired from the pitch in 1980, ran marathons for three years, and returned for one final season with the LA Rugby Club &ldquo;Lunchtime Legends&rdquo; old boys team in 1990.</p>
+              <p>With the exception of his first two years at Drew &mdash; where fellow inductee John Hinchcliff held the #8 position &mdash; Don always played #8 and took all penalty kicks. He was likely the leading scorer at Drew during his nine seasons and the second-leading scorer at Princeton Athletic Club.</p>
+            </div>
+          </div>
+    
+          <div class="hof-card hof-card-full">
+            <div class="hof-header">
+              <div class="hof-avatar"><img src="Hinchcliff-photo.png" alt="John Hinchcliff" /></div>
+              <div>
+                <div class="hof-name">John Hinchcliff</div>
+                <div class="hof-detail">Loose Forward &middot; Class of &rsquo;69 &middot; New Zealand</div>
+                <div class="hof-date">DRFC HoF 2022</div>
+              </div>
+            </div>
+            <div class="hof-bio">
+              <p>John Hinchcliff began playing rugby as a nine-year-old in New Zealand. At Nelson College his commitment deepened, and at Canterbury University (1959&ndash;61) he played mostly loose forward at one of New Zealand&rsquo;s finest programs.</p>
+              <p>A Rotary scholarship brought John to Israel, and later a Doctorate program brought him to Drew &mdash; which he described as a <em>&ldquo;pleasant, friendly and caring campus.&rdquo;</em> His memories of Drew rugby center on a group of committed players who became a strong platform to develop a fine team. John brought with him the rugby culture and traditions of New Zealand, helping shape the identity of the early DRFC.</p>
+              <p>After Drew, John taught Philosophy at Hampden-Sydney College in Virginia, where he found a similarly small and dedicated group of rugby enthusiasts. He remains an admirer of the game from, as he puts it, <em>&ldquo;the comfort of my armchair.&rdquo;</em></p>
+              <img src="Hinchcliff-team-photo.png" alt="John Hinchcliff with Drew RFC team" style="width:100%; max-width:350px; height:auto; margin-top:1rem; border-radius:4px;" />
+            </div>
+          </div>
+    
         </div>
       </div>
     
@@ -761,6 +918,13 @@
         navMenu.classList.remove('open');
       });
     });
+
+    function toggleYear(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = content.style.display !== 'none';
+    content.style.display = isOpen ? 'none' : 'flex';
+    btn.classList.toggle('open', !isOpen);
+  }
 
     // Formspree AJAX submission
     const form = document.getElementById('interest-form-el');

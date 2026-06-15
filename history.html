@@ -1,542 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="DRFC-logo.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drew Rugby Football Club</title>
-  <!-- SEO -->
-  <meta name="description" content="Drew Rugby Football Club — a legendary D-III program that defeated the best D-I teams in the northeast. Est. 1963 at Drew University in Madison, NJ. Now rebuilding. Get involved." />
-  <meta name="keywords" content="Drew Rugby, Drew University Rugby, DRFC, Drew RFC, Madison NJ rugby, collegiate rugby, Drew University athletics" />
-  <meta name="author" content="Drew Rugby Football Club Alumni" />
+<link rel="icon" type="image/png" href="DRFC-logo.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>History &mdash; Drew Rugby Football Club</title>
+<meta name="description" content="The history of Drew Rugby Football Club — founded 1963 at Drew University in Madison, NJ. Timeline, legacy documents, and club records." />
+<meta name="keywords" content="Drew Rugby history, DRFC history, Drew University Rugby, Drew RFC timeline" />
+<meta name="author" content="Drew Rugby Football Club Alumni" />
+<meta property="og:title" content="History — Drew Rugby Football Club" />
+<meta property="og:description" content="The history of Drew Rugby Football Club — founded 1963, a D-III program that defeated the best D-I teams in the northeast." />
+<meta property="og:image" content="https://drewrfc.org/DRFC-logo.png" />
+<meta property="og:url" content="https://drewrfc.org/history.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="History — Drew Rugby Football Club" />
+<meta name="twitter:description" content="The history of Drew Rugby Football Club — founded 1963." />
+<meta name="twitter:image" content="https://drewrfc.org/DRFC-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --oxford: #0C2F59;
+  --oxford-dark: #071E3D;
+  --oxford-mid: #0F3D6E;
+  --green: #004E32;
+  --green-dark: #003322;
+  --yellow: #f5d20a;
+  --white: #ffffff;
+  --off-white: #f4f4f2;
+  --text-dark: #111111;
+  --text-mid: #444444;
+  --text-light: #777777;
+  --border: #dddddd;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Lato', sans-serif; background: var(--off-white); color: var(--text-dark); }
 
-  <!-- Open Graph (social media previews) -->
-  <meta property="og:title" content="Drew Rugby Football Club" />
-  <meta property="og:description" content="A legendary D-III program that defeated the best D-I teams in the northeast. Est. 1963. Now rebuilding — get involved." />
-  <meta property="og:image" content="https://drewrfc.org/DRFC-logo.png" />
-  <meta property="og:url" content="https://drewrfc.org" />
-  <meta property="og:type" content="website" />
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Drew Rugby Football Club" />
-  <meta name="twitter:description" content="A legendary D-III program that defeated the best D-I teams in the northeast. Est. 1963. Now rebuilding." />
-  <meta name="twitter:image" content="https://drewrfc.org/DRFC-logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* NAV */
+nav { background: var(--oxford-dark); border-bottom: 3px solid var(--green); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 68px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 4px; }
+.nav-wordmark { color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.12em; line-height: 1; }
+.nav-wordmark span { color: var(--yellow); }
+.nav-links { display: flex; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0 14px; height: 68px; display: flex; align-items: center; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: color 0.15s, border-color 0.15s; }
+.nav-links a:hover, .nav-links a.active { color: var(--white); border-bottom-color: var(--yellow); }
 
-    :root {
-      --oxford:      #0C2F59;
-      --oxford-dark: #071E3D;
-      --oxford-mid:  #0F3D6E;
-      --green:       #004E32;
-      --green-dark:  #003322;
-      --yellow:      #f5d20a;
-      --white:       #ffffff;
-      --off-white:   #f4f4f2;
-      --text-dark:   #111111;
-      --text-mid:    #444444;
-      --text-light:  #777777;
-      --border:      #dddddd;
-    }
+/* PAGE HEADER */
+.page-header { background: var(--oxford); position: relative; padding: 2.5rem 2.5rem 2rem; display: flex; align-items: flex-end; gap: 20px; border-bottom: 4px solid var(--green); }
+.page-header::before, .page-header::after { content: ''; position: absolute; top: 0; bottom: 0; width: 7px; background: var(--green); }
+.page-header::before { left: 0; }
+.page-header::after { right: 0; }
+.page-header-crest { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4)); }
+.page-header-text { position: relative; z-index: 2; }
+.page-header-label { display: inline-block; background: var(--green); color: var(--yellow); font-size: 10px; font-weight: 700; padding: 3px 12px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 8px; }
+.page-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 1; color: var(--white); letter-spacing: 0.04em; }
+.page-header h1 span { color: var(--yellow); }
+.page-header-sub { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 300; font-style: italic; margin-top: 6px; }
+.page-breadcrumb { background: var(--oxford-mid); padding: 10px 2.5rem; font-size: 12px; color: rgba(255,255,255,0.45); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.page-breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.page-breadcrumb a:hover { color: var(--yellow); }
+.page-breadcrumb span { margin: 0 6px; }
 
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Lato', sans-serif; background: var(--off-white); color: var(--text-dark); }
+/* MAIN */
+main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+.section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--green); margin-bottom: 6px; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 0.06em; color: var(--oxford); margin-bottom: 1.5rem; }
 
-    /* NAV */
-    nav {
-      background: var(--oxford-dark);
-      border-bottom: 3px solid var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2.5rem;
-      height: 68px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-    .nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 4px; }
-    .nav-wordmark { color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.12em; line-height: 1; }
-    .nav-wordmark span { color: var(--yellow); }
-    .nav-links { display: flex; align-items: center; }
-    .nav-links a {
-      color: rgba(255,255,255,0.65);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0 14px;
-      height: 68px;
-      display: flex;
-      align-items: center;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -3px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); border-bottom-color: var(--yellow); }
+/* Timeline */
+.timeline-section { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--oxford); border-radius: 5px; padding: 1.75rem; margin-bottom: 3rem; }
+.timeline-item { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid #eee; }
+.timeline-item:first-child { padding-top: 0; }
+.timeline-item:last-child { border-bottom: none; padding-bottom: 0; }
+.timeline-year { min-width: 60px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.06em; color: var(--oxford); padding-top: 2px; }
+.timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--yellow); border: 2px solid var(--green); margin-top: 5px; flex-shrink: 0; }
+.timeline-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
 
-    /* HERO */
-    .hero {
-      background: var(--oxford);
-      position: relative;
-      min-height: 420px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      padding: 3rem 2rem;
-    }
-    .hero::before, .hero::after { content: ''; position: absolute; top: 0; bottom: 0; width: 7px; background: var(--green); }
-    .hero::before { left: 0; }
-    .hero::after  { right: 0; }
-    .hero-content { position: relative; z-index: 2; text-align: center; max-width: 620px; }
-    .hero-badge {
-      display: inline-block;
-      background: var(--green);
-      color: var(--yellow);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 5px 18px;
-      border-radius: 2px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      margin-bottom: 20px;
-    }
-    .hero-crest {
-      width: 180px;
-      height: 180px;
-      object-fit: contain;
-      margin: 12px auto 20px;
-      display: block;
-      filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5));
-    }
-    .hero h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 72px;
-      line-height: 0.95;
-      color: var(--white);
-      letter-spacing: 0.04em;
-      margin-bottom: 16px;
-    }
-    .hero h1 span { color: var(--yellow); }
-    .hero-sub { color: rgba(255,255,255,0.55); font-size: 15px; font-weight: 300; line-height: 1.7; margin-bottom: 32px; font-style: italic; }
-    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--green); color: var(--white); border: none;
-      padding: 13px 28px; font-family: 'Lato', sans-serif; font-size: 13px;
-      font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
-      border-radius: 3px; cursor: pointer; text-decoration: none;
-      display: inline-block; transition: background 0.15s;
-    }
-    .btn-primary:hover { background: var(--green-dark); }
-    .btn-outline {
-      background: transparent; color: var(--yellow); border: 2px solid var(--yellow);
-      padding: 11px 28px; font-family: 'Lato', sans-serif; font-size: 13px;
-      font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
-      border-radius: 3px; cursor: pointer; text-decoration: none;
-      display: inline-block; transition: background 0.15s, color 0.15s;
-    }
-    .btn-outline:hover { background: var(--yellow); color: var(--oxford-dark); }
+/* Placeholders */
+.section-placeholder { background: var(--white); border: 1px dashed var(--border); border-radius: 5px; padding: 3rem; text-align: center; margin-bottom: 3rem; }
+.section-placeholder p { color: var(--text-light); font-size: 14px; font-style: italic; }
+.section-placeholder a { color: var(--green); font-weight: 700; }
 
-    /* CREST BAND */
-    .crest-band {
-      background: var(--oxford-mid);
-      border-bottom: 3px solid var(--green);
-      display: flex; align-items: center; justify-content: center;
-      padding: 16px 2rem; gap: 22px; flex-wrap: wrap;
-    }
-    .crest-band img { width: 48px; height: 48px; object-fit: contain; }
-    .crest-band-text { color: rgba(255,255,255,0.45); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; }
-    .crest-band-divider { width: 1px; height: 26px; background: rgba(255,255,255,0.15); }
+/* FOOTER */
+footer { background: var(--oxford-dark); border-top: 4px solid var(--green); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.footer-logo img { width: 40px; height: 40px; object-fit: contain; }
+.footer-logo span { color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 300; }
+.footer-tagline { color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.1em; opacity: 0.8; }
+.footer-copy { color: rgba(255,255,255,0.25); font-size: 11px; width: 100%; text-align: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+.footer-copy a { color: var(--yellow); text-decoration: none; opacity: 0.7; }
+.footer-copy a:hover { opacity: 1; }
 
-    /* STATS BAR */
-    .stats-bar { background: var(--green); display: flex; justify-content: center; flex-wrap: wrap; }
-    .stat { padding: 20px 44px; text-align: center; border-right: 1px solid rgba(255,255,255,0.15); }
-    .stat:last-child { border-right: none; }
-    .stat-num { color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 0.06em; line-height: 1; }
-    .stat-label { color: rgba(255,255,255,0.7); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+/* HAMBURGER */
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* MAIN */
-    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
-    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--green); margin-bottom: 6px; }
-    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 0.06em; color: var(--oxford); margin-bottom: 1.5rem; }
-    .section-sub { font-size: 14px; color: var(--text-light); margin-bottom: 1.5rem; margin-top: -1rem; font-style: italic; }
-
-    /* Cards */
-    .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 3rem; }
-    .card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--oxford); border-radius: 5px; padding: 1.5rem; }
-    .card.green-top  { border-top-color: var(--green); }
-    .card.yellow-top { border-top-color: var(--yellow); }
-    .card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.06em; color: var(--oxford); margin-bottom: 10px; }
-    .card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
-
-    /* Timeline */
-    .timeline-section { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--oxford); border-radius: 5px; padding: 1.75rem; margin-bottom: 3rem; }
-    .timeline-item { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid #eee; }
-    .timeline-item:first-child { padding-top: 0; }
-    .timeline-item:last-child  { border-bottom: none; padding-bottom: 0; }
-    .timeline-year { min-width: 60px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.06em; color: var(--oxford); padding-top: 2px; }
-    .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--yellow); border: 2px solid var(--green); margin-top: 5px; flex-shrink: 0; }
-    .timeline-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
-
-    /* Placeholders */
-    .section-placeholder { background: var(--white); border: 1px dashed var(--border); border-radius: 5px; padding: 3rem; text-align: center; margin-bottom: 3rem; }
-    .section-placeholder p { color: var(--text-light); font-size: 14px; font-style: italic; }
-    .section-placeholder a { color: var(--green); font-weight: 700; }
-
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-bottom: 3rem;
-    }
-    .photo-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      overflow: hidden;
-    }
-    .photo-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-    .photo-card.natural img {
-      height: auto;
-      object-fit: unset;
-    }
-    @media (max-width: 768px) {
-      .photo-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Hall of Fame */
-    .hof-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 3rem; }
-    .hof-card { background: var(--white); border: 1px solid var(--border); border-radius: 5px; padding: 1.1rem; display: flex; align-items: center; gap: 14px; transition: border-color 0.15s; }
-    .hof-card:hover { border-color: var(--oxford); }
-    .hof-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 3px solid var(--oxford);
-    }
-    .hof-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    #clarke-avatar img {
-      object-position: center 30%;
-    }
-    .hof-name { font-size: 14px; font-weight: 700; color: var(--text-dark); }
-    .hof-detail { font-size: 12px; color: var(--text-light); margin-top: 3px; }
-    .hof-date { font-size: 12px; color: var(--text-light); margin-top: 3px; }
-    .hof-card-full {
-      display: block;
-      padding: 1.5rem;
-    }
-    .hof-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .hof-bio p {
-      font-size: 14px;
-      color: var(--text-mid);
-      line-height: 1.75;
-      font-weight: 300;
-      margin-bottom: 0.75rem;
-    }
-    .hof-bio p:last-child { margin-bottom: 0; }
-    .hof-bio strong { color: var(--oxford); font-weight: 700; }
-
-    .hof-accordion { margin-bottom: 3rem; }
-
-    .hof-year {
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      margin-bottom: 12px;
-      overflow: hidden;
-    }
-    
-    .hof-year-toggle {
-      width: 100%;
-      background: var(--oxford);
-      color: var(--white);
-      border: none;
-      padding: 1rem 1.5rem;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 22px;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.15s;
-    }
-    
-    .hof-year-toggle:hover { background: var(--oxford-mid); }
-    
-    .hof-chevron {
-      font-size: 12px;
-      transition: transform 0.25s;
-      transform: rotate(180deg);
-    }
-    
-    .hof-year-toggle.open .hof-chevron {
-      transform: rotate(0deg);
-    }
-    
-    .hof-year-content {
-      padding: 1.5rem;
-      background: var(--off-white);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    /* RECRUITMENT */
-    .recruit-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 2.5rem; }
-    .recruit-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--oxford); border-radius: 5px; padding: 1.5rem; }
-    .recruit-card.green-top  { border-top-color: var(--green); }
-    .recruit-card.yellow-top { border-top-color: var(--yellow); }
-    .recruit-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.06em; color: var(--oxford); margin-bottom: 8px; }
-    .recruit-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
-
-    .revival-banner {
-      background: var(--oxford);
-      border-radius: 5px;
-      padding: 2rem 2.5rem;
-      margin-bottom: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .revival-banner h2 { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.06em; color: var(--white); margin-bottom: 8px; }
-    .revival-banner p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; font-weight: 300; max-width: 620px; }
-    .revival-badge { background: var(--yellow); color: var(--oxford-dark); font-size: 11px; font-weight: 700; padding: 6px 16px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; align-self: flex-start; flex-shrink: 0; }
-
-    .interest-form {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--green);
-      border-radius: 5px;
-      padding: 2rem;
-      margin-bottom: 3rem;
-    }
-    .interest-form h3 { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 0.06em; color: var(--oxford); margin-bottom: 6px; }
-    .interest-form .form-sub { font-size: 14px; color: var(--text-light); font-style: italic; margin-bottom: 1.5rem; font-weight: 300; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-    .form-full { grid-column: 1 / -1; }
-    .form-group { display: flex; flex-direction: column; gap: 5px; }
-    .form-group label { font-size: 11px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 10px 12px;
-      font-size: 14px;
-      font-family: 'Lato', sans-serif;
-      background: var(--off-white);
-      color: var(--text-dark);
-      transition: border-color 0.15s;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { outline: none; border-color: var(--oxford); background: var(--white); }
-    .form-group textarea { resize: vertical; min-height: 90px; }
-    .form-submit {
-      background: var(--green); color: var(--white); border: none;
-      padding: 13px 36px; font-family: 'Lato', sans-serif; font-size: 13px;
-      font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
-      border-radius: 3px; cursor: pointer; margin-top: 8px; transition: background 0.15s;
-    }
-    .form-submit:hover { background: var(--green-dark); }
-    .form-note { font-size: 12px; color: var(--text-light); margin-top: 10px; font-style: italic; font-weight: 300; }
-    .form-success { display: none; background: #f0faf4; border: 1px solid #b7dfc6; border-radius: 5px; padding: 2rem; text-align: center; }
-    .form-success h4 { color: var(--green); font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 0.06em; margin-bottom: 8px; }
-    .form-success p { color: var(--text-mid); font-size: 14px; font-weight: 300; }
-
-    /* FOOTER */
-    footer {
-      background: var(--oxford-dark);
-      border-top: 4px solid var(--green);
-      padding: 2rem 2.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 16px;
-    }
-    .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .footer-logo img { width: 40px; height: 40px; object-fit: contain; }
-    .footer-logo span { color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 300; }
-    .footer-tagline { color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.1em; opacity: 0.8; }
-    .footer-copy { color: rgba(255,255,255,0.25); font-size: 11px; width: 100%; text-align: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .footer-copy a { color: var(--yellow); text-decoration: none; opacity: 0.7; }
-    .footer-copy a:hover { opacity: 1; }
-
-    /* HAMBURGER BUTTON */
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-    .nav-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: all 0.25s;
-    }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      nav { padding: 0 1.25rem; height: 60px; }
-      .nav-toggle { display: flex; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: var(--oxford-dark);
-        border-bottom: 3px solid var(--green);
-        flex-direction: column;
-        padding: 0.5rem 0;
-        z-index: 199;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a {
-        height: auto;
-        padding: 14px 1.5rem;
-        border-bottom: none;
-        border-left: 3px solid transparent;
-        margin-bottom: 0;
-        font-size: 13px;
-        border-top: 0.5px solid rgba(255,255,255,0.06);
-      }
-      .nav-links a:hover, .nav-links a.active {
-        border-bottom: none;
-        border-left-color: var(--yellow);
-        background: rgba(255,255,255,0.04);
-      }
-      .nav-wordmark { font-size: 18px; }
-      .hero { padding: 2.5rem 1.25rem; min-height: auto; }
-      .hero h1 { font-size: 48px; }
-      .hero-crest { width: 130px; height: 130px; }
-      .hero-sub { font-size: 14px; }
-      .hero-btns { flex-direction: column; align-items: center; }
-      .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
-      .crest-band { gap: 12px; padding: 14px 1rem; }
-      .crest-band img { width: 36px; height: 36px; }
-      .crest-band-text { font-size: 10px; }
-      .crest-band-divider { display: none; }
-      .stats-bar { display: grid; grid-template-columns: 1fr 1fr; }
-      .stat { padding: 16px 12px; border-right: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); }
-      .stat:nth-child(2), .stat:nth-child(4) { border-right: none; }
-      .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
-      .stat-num { font-size: 26px; }
-      main { padding: 2rem 1.25rem; }
-      .section-title { font-size: 26px; margin-bottom: 1rem; }
-      .card-grid, .hof-grid, .recruit-values { grid-template-columns: 1fr; }
-      .timeline-year { min-width: 52px; font-size: 15px; }
-      .revival-banner { flex-direction: column; padding: 1.5rem; }
-      .revival-banner h2 { font-size: 22px; }
-      .revival-badge { align-self: flex-start; }
-      .form-row { grid-template-columns: 1fr; }
-      .interest-form { padding: 1.5rem 1.25rem; }
-      footer { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; }
-      .footer-logo { justify-content: center; }
-    }
-
-    @media (max-width: 400px) {
-      .hero h1 { font-size: 38px; }
-      .hero-crest { width: 110px; height: 110px; }
-      .stat-num { font-size: 22px; }
-      .stat-label { font-size: 10px; }
-    }
-  </style>
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; height: 60px; }
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--oxford-dark); border-bottom: 3px solid var(--green); flex-direction: column; padding: 0.5rem 0; z-index: 199; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+  .nav-links.open { display: flex; }
+  .nav-links a { height: auto; padding: 14px 1.5rem; border-bottom: none; border-left: 3px solid transparent; margin-bottom: 0; font-size: 13px; border-top: 0.5px solid rgba(255,255,255,0.06); }
+  .nav-links a:hover, .nav-links a.active { border-bottom: none; border-left-color: var(--yellow); background: rgba(255,255,255,0.04); }
+  .nav-wordmark { font-size: 18px; }
+  .page-header { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .page-header-crest { width: 52px; height: 52px; }
+  .page-header h1 { font-size: 36px; }
+  .page-breadcrumb { padding: 10px 1.25rem; }
+  main { padding: 2rem 1.25rem; }
+  .section-title { font-size: 26px; margin-bottom: 1rem; }
+  .timeline-year { min-width: 52px; font-size: 15px; }
+  footer { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; }
+  .footer-logo { justify-content: center; }
+}
+</style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="#home" class="nav-logo">
-      <img src="DRFC-logo.png" alt="Drew RFC Crest" />
-      <div class="nav-wordmark">Drew <span>RFC</span></div>
-    </a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="#home" class="active">Home</a>
-      <a href="#history">History</a>
-      <a href="#year-by-year">Year by Year</a>
-      <a href="#photos">Photos</a>
-      <a href="#season">Current Season</a>
-      <a href="#hof">Hall of Fame</a>
-      <a href="#recruit">Get Involved</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-badge">Drew University &middot; Madison, NJ</div>
-      <img src="DRFC-logo.png" alt="Drew RFC Crest" class="hero-crest" />
-      <h1>Drew Rugby<br><span>Football Club</span></h1>
-      <p class="hero-sub">A legacy of excellence &mdash; D-III champions who competed with and defeated the best D-I programs in the northeast.</p>
-      <div class="hero-btns">
-        <a href="#history" class="btn-primary">Explore Our History</a>
-        <a href="#recruit" class="btn-outline">Get Involved</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS BAR -->
-  <div class="stats-bar">
-    <div class="stat"><div class="stat-num">1963</div><div class="stat-label">Founded</div></div>
-    <div class="stat"><div class="stat-num">D-I</div><div class="stat-label">Opponents Beaten</div></div>
-    <div class="stat"><div class="stat-num">60+</div><div class="stat-label">Years of History</div></div>
-    <div class="stat"><div class="stat-num">NE</div><div class="stat-label">Powerhouse</div></div>
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="DRFC-logo.png" alt="Drew RFC Crest" />
+    <div class="nav-wordmark">Drew <span>RFC</span></div>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="history.html" class="active">History</a>
+    <a href="hof.html">Hall of Fame</a>
+    <a href="memoriam.html">In Memoriam</a>
+    <a href="index.html#recruit">Get Involved</a>
   </div>
+</nav>
 
-  <!-- MAIN CONTENT -->
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <img src="DRFC-logo.png" alt="Drew RFC Crest" class="page-header-crest" />
+  <div class="page-header-text">
+    <div class="page-header-label">Drew University &middot; Est. 1963</div>
+    <h1>Club <span>History</span></h1>
+    <p class="page-header-sub">The DRFC story &mdash; from founding through legacy.</p>
+  </div>
+</div>
+<div class="page-breadcrumb">
+  <a href="index.html">Home</a><span>&rsaquo;</span> History
+</div>
+
+<!-- MAIN CONTENT -->
 <main>
-
-  <div class="section-label">History</div>
+  <div class="section-label">Timeline</div>
   <div class="section-title">The DRFC Story</div>
-
   <div class="timeline-section">
     <div class="timeline-item">
       <div class="timeline-year">1963</div>
       <div class="timeline-dot"></div>
       <div class="timeline-text">Drew Rugby Football Club is formed as a men&rsquo;s rugby team at Drew University in Madison, NJ &mdash; planting the roots of what would grow into one of the northeast&rsquo;s most respected programs.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1966</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-text">John Hinchcliff, a graduate student from New Zealand, mentors the team and teaches proper rugby fundamentals, transforming a group of enthusiastic former football players into skilled ruggers.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1968</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-text">DRFC defeats Army at West Point &mdash; a landmark early victory that signals the program&rsquo;s rising competitive standard.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1969</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-text">DRFC defeats Princeton in the spring season to capture the <strong>Schaeffer Cup for the first time</strong>, beating Princeton and Rutgers en route. A defining moment in program history.</div>
     </div>
     <div class="timeline-item">
       <div class="timeline-year">1971</div>
@@ -546,12 +189,12 @@
     <div class="timeline-item">
       <div class="timeline-year">Peak Era</div>
       <div class="timeline-dot"></div>
-      <div class="timeline-text">DRFC reaches its competitive peak, defeating D-I opponents and earning national recognition despite competing at the D-III level. The club becomes a powerhouse of northeast collegiate rugby.</div>
+      <div class="timeline-text">DRFC reaches its competitive peak, defeating D-I opponents and earning national recognition despite competing at the D-III level. The 1978&ndash;1979 team shuts out every college opponent they face. The club becomes a true powerhouse of northeast collegiate rugby.</div>
     </div>
     <div class="timeline-item">
       <div class="timeline-year">Legacy</div>
       <div class="timeline-dot"></div>
-      <div class="timeline-text">The club ceases operations, but the alumni network remains active and proud. Efforts are now underway to bring rugby back to Drew University and restore the club to its former glory.</div>
+      <div class="timeline-text">The club ceases operations, but the alumni network remains active and proud. The Hall of Fame was established in 2022 to formally honor those who built the program. Efforts are now underway to bring rugby back to Drew University.</div>
     </div>
   </div>
 
@@ -560,91 +203,37 @@
   <div class="section-placeholder">
     <p>Historical documents including recruiting letters, match programs, and club records &mdash; coming soon.</p>
   </div>
-
 </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <a href="#home" class="footer-logo">
-      <img src="DRFC-logo.png" alt="Drew RFC" />
-      <span>Drew Rugby Football Club &middot; Est. 1963 &middot; Madison, NJ</span>
-    </a>
-      <a href="https://www.facebook.com/DrewRugby/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; font-family: 'Lato', sans-serif;">
-      <i class="fab fa-facebook-square"></i> Facebook
-    </a>
-    <div class="footer-tagline">Forged at Drew, Proven Everywhere.</div>
-    <div class="footer-copy">
-      &copy; Drew Rugby Football Club Alumni. All rights reserved. &nbsp;|&nbsp;
-      Site designed &amp; maintained by <a href="https://noros.life" target="_blank">Noros Solutions</a>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="DRFC-logo.png" alt="Drew RFC" />
+    <span>Drew Rugby Football Club &middot; Est. 1963 &middot; Madison, NJ</span>
+  </a>
+  <a href="https://www.facebook.com/DrewRugby/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; font-family: 'Lato', sans-serif;">
+    <i class="fab fa-facebook-square"></i> Facebook
+  </a>
+  <div class="footer-tagline">Forged at Drew, Proven Everywhere.</div>
+  <div class="footer-copy">
+    &copy; Drew Rugby Football Club Alumni. All rights reserved. &nbsp;|&nbsp;
+    Site designed &amp; maintained by <a href="https://noros.life" target="_blank">Noros Solutions</a>
+  </div>
+</footer>
 
-  <script>
-    // Hamburger menu toggle
-    const toggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      navMenu.classList.toggle('open');
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.classList.remove('open');
+      navMenu.classList.remove('open');
     });
-    // Close menu when a link is tapped
-    navMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        navMenu.classList.remove('open');
-      });
-    });
-
-    function toggleYear(btn) {
-    const content = btn.nextElementSibling;
-    const isOpen = content.style.display !== 'none';
-    content.style.display = isOpen ? 'none' : 'flex';
-    btn.classList.toggle('open', !isOpen);
-  }
-
-    // Formspree AJAX submission
-    const form = document.getElementById('interest-form-el');
-    const success = document.getElementById('form-success');
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          form.style.display = 'none';
-          success.style.display = 'block';
-        } else {
-          btn.textContent = 'Submit Interest';
-          btn.disabled = false;
-          alert('Something went wrong. Please try again or email us directly.');
-        }
-      } catch(err) {
-        btn.textContent = 'Submit Interest';
-        btn.disabled = false;
-        alert('Network error. Please check your connection and try again.');
-      }
-    });
-
-    // Active nav link on scroll
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const anchors = ['home','history','year-by-year','photos','season','hof','recruit'];
-    window.addEventListener('scroll', () => {
-      let current = 'home';
-      anchors.forEach(id => {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 120) current = id;
-      });
-      navLinks.forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-      });
-    });
-  </script>
-
+  });
+</script>
 </body>
 </html>

@@ -81,55 +81,28 @@ main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
 .memoriam-intro p { font-size: 15px; color: var(--text-mid); line-height: 1.8; font-weight: 300; }
 
 /* FOOTER */
-footer { background: var(--oxford-dark); border-top: 4px solid var(--green); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+footer { background: var(--oxford-dark); border-top: 4px solid var(--green); padding: 1.75rem 2.5rem; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
 .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .footer-logo img { width: 40px; height: 40px; object-fit: contain; }
 .footer-logo span { color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 300; }
-.footer-tagline { color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.1em; opacity: 0.8; }
+.footer-tagline { color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.1em; opacity: 0.8; align-self: center; }
 .footer-copy { color: rgba(255,255,255,0.25); font-size: 11px; width: 100%; text-align: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
 .footer-copy a { color: var(--yellow); text-decoration: none; opacity: 0.7; }
 .footer-copy a:hover { opacity: 1; }
-
-/* HAMBURGER */
-.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  nav { padding: 0 1.25rem; height: 60px; }
-  .nav-toggle { display: flex; }
-  .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--oxford-dark); border-bottom: 3px solid var(--green); flex-direction: column; padding: 0.5rem 0; z-index: 199; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
-  .nav-links.open { display: flex; }
-  .nav-links a { height: auto; padding: 14px 1.5rem; border-bottom: none; border-left: 3px solid transparent; margin-bottom: 0; font-size: 13px; border-top: 0.5px solid rgba(255,255,255,0.06); }
-  .nav-links a:hover, .nav-links a.active { border-bottom: none; border-left-color: var(--yellow); background: rgba(255,255,255,0.04); }
-  .nav-wordmark { font-size: 18px; }
-  .page-header { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; gap: 12px; }
-  .page-header-crest { width: 52px; height: 52px; }
-  .page-header h1 { font-size: 36px; }
-  .page-breadcrumb { padding: 10px 1.25rem; }
-  main { padding: 2rem 1.25rem; }
-  .section-title { font-size: 26px; margin-bottom: 1rem; }
-  footer { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; }
-  .footer-logo { justify-content: center; }
-}
-
-/* FOOTER SUPPORT ROW */
-.footer-support { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; width: 100%; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2px; }
-.footer-support-label { color: rgba(255,255,255,0.35); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; white-space: nowrap; }
-.footer-support-links { display: flex; align-items: center; gap: 10px; }
-.footer-icon-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; text-decoration: none; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
+/* FOOTER ICON COLUMNS */
+.footer-icon-col { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.footer-icon-col-label { color: rgba(255,255,255,0.3); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+.footer-icon-group { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.footer-icon-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 8px; text-decoration: none; transition: transform 0.15s, opacity 0.15s; opacity: 0.7; }
 .footer-icon-btn:hover { transform: scale(1.12); opacity: 1; }
 .footer-icon-btn img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
-.footer-icon-btn .fab { font-size: 28px; color: #008CFF; }
-.footer-icon-btn .tooltip { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); color: #fff; font-size: 11px; font-weight: 600; font-family: 'Lato', sans-serif; white-space: nowrap; padding: 5px 10px; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.15s; letter-spacing: 0.04em; }
-.footer-icon-btn .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: rgba(0,0,0,0.85); }
+.footer-icon-btn i { font-size: 26px; }
+.footer-icon-btn .fa-venmo { color: #008CFF; }
+.footer-icon-btn .fa-facebook-square, .footer-icon-btn .fa-facebook { color: #1877F2; }
+.footer-icon-btn .fa-envelope { color: rgba(255,255,255,0.6); font-size: 22px; }
+.footer-icon-btn .tooltip { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.88); color: #fff; font-size: 11px; font-weight: 600; font-family: 'Lato', sans-serif; white-space: nowrap; padding: 5px 10px; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.15s; letter-spacing: 0.04em; z-index: 10; }
+.footer-icon-btn .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: rgba(0,0,0,0.88); }
 .footer-icon-btn:hover .tooltip { opacity: 1; }
-.footer-contact { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 12px; font-family: 'Lato', sans-serif; }
-.footer-contact a { color: rgba(255,255,255,0.55); text-decoration: none; }
-.footer-contact a:hover { color: var(--yellow); }
 
 </style>
 </head>
@@ -181,37 +154,42 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
 
 <!-- FOOTER -->
 <footer>
-  <!-- SUPPORT ROW -->
-  <div class="footer-support">
-    <span class="footer-support-label">Support DRFC</span>
-    <div class="footer-support-links">
-      <a href="https://venmo.com/Christopher-Walsh-192" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Venmo">
-        <i class="fab fa-venmo"></i>
-        <span class="tooltip">Venmo @Christopher-Walsh-192</span>
-      </a>
-      <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Zelle">
-        <img src="Zelle-Symbol.png" alt="Zelle" />
-        <span class="tooltip">Zelle 201-774-0666</span>
-      </a>
-    </div>
-    <div class="footer-contact">
-      <i class="fas fa-envelope" style="font-size:11px;"></i>
-      <a href="mailto:christopherwalsh@gmail.com">christopherwalsh@gmail.com</a>
-    </div>
-  </div>
-    <div class="footer-contact">
-      <i class="fas fa-envelope" style="font-size:11px;"></i>
-      <a href="mailto:christopherwalsh@gmail.com">christopherwalsh@gmail.com</a>
-    </div>
-  </div>
   <a href="index.html" class="footer-logo">
     <img src="DRFC-logo.png" alt="Drew RFC" />
     <span>Drew Rugby Football Club &middot; Est. 1963 &middot; Madison, NJ</span>
   </a>
-  <a href="https://www.facebook.com/DrewRugby/" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; font-family: 'Lato', sans-serif;">
-    <i class="fab fa-facebook-square"></i> Facebook
-  </a>
   <div class="footer-tagline">Forged at Drew, Proven Everywhere.</div>
+  <!-- ICON COLUMNS -->
+  <div style="display:flex;gap:24px;align-items:flex-start;">
+    <!-- Connect column -->
+    <div class="footer-icon-col">
+      <span class="footer-icon-col-label">Connect</span>
+      <div class="footer-icon-group">
+        <a href="https://www.facebook.com/DrewRugby/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-square"></i>
+          <span class="tooltip">Facebook</span>
+        </a>
+        <a href="mailto:christopherwalsh@gmail.com" class="footer-icon-btn" aria-label="Email us">
+          <i class="fa-solid fa-envelope"></i>
+          <span class="tooltip">christopherwalsh@gmail.com</span>
+        </a>
+      </div>
+    </div>
+    <!-- Support column -->
+    <div class="footer-icon-col">
+      <span class="footer-icon-col-label">Support</span>
+      <div class="footer-icon-group">
+        <a href="https://venmo.com/Christopher-Walsh-192" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Venmo">
+          <i class="fa-brands fa-venmo"></i>
+          <span class="tooltip">Venmo @Christopher-Walsh-192</span>
+        </a>
+        <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Zelle">
+          <img src="Zelle-Symbol.png" alt="Zelle" />
+          <span class="tooltip">Zelle 201-774-0666</span>
+        </a>
+      </div>
+    </div>
+  </div>
   <div class="footer-copy">
     &copy; Drew Rugby Football Club Alumni. All rights reserved. &nbsp;|&nbsp;
     Site designed &amp; maintained by <a href="https://noros.life" target="_blank">Noros Solutions</a>

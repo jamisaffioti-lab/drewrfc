@@ -290,6 +290,22 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
   .stat-num { font-size: 22px; }
   .stat-label { font-size: 10px; }
 }
+
+/* FOOTER SUPPORT ROW */
+.footer-support { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; width: 100%; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2px; }
+.footer-support-label { color: rgba(255,255,255,0.35); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; white-space: nowrap; }
+.footer-support-links { display: flex; align-items: center; gap: 10px; }
+.footer-icon-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; text-decoration: none; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
+.footer-icon-btn:hover { transform: scale(1.12); opacity: 1; }
+.footer-icon-btn img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
+.footer-icon-btn .fab { font-size: 28px; color: #008CFF; }
+.footer-icon-btn .tooltip { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); color: #fff; font-size: 11px; font-weight: 600; font-family: 'Lato', sans-serif; white-space: nowrap; padding: 5px 10px; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.15s; letter-spacing: 0.04em; }
+.footer-icon-btn .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: rgba(0,0,0,0.85); }
+.footer-icon-btn:hover .tooltip { opacity: 1; }
+.footer-contact { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 12px; font-family: 'Lato', sans-serif; }
+.footer-contact a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.footer-contact a:hover { color: var(--yellow); }
+
 </style>
 </head>
 <body>
@@ -309,6 +325,7 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
     <a href="hof.html">Hall of Fame</a>
     <a href="memoriam.html">In Memoriam</a>
     <a href="index.html#recruit">Get Involved</a>
+    <a href="index.html#support">Support</a>
   </div>
 </nav>
 
@@ -460,10 +477,73 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
       <p>We&rsquo;ve received your interest and will be in touch soon. Welcome to the brotherhood.</p>
     </div>
   </div>
+
+  <!-- SUPPORT THE CLUB -->
+  <div id="support">
+    <div class="section-label">Support the Club</div>
+    <div class="section-title">Help Fund the Revival</div>
+  </div>
+  <div class="revival-banner" style="margin-bottom:1.5rem;">
+    <div>
+      <h2>Every Dollar Helps</h2>
+      <p>DRFC is alumni-funded. Contributions go directly toward reviving the club at Drew University &mdash; covering registration fees, equipment, and travel. No amount is too small.</p>
+    </div>
+    <div class="revival-badge">Alumni Supported</div>
+  </div>
+  <div class="recruit-values" style="margin-bottom:3rem;">
+    <div class="recruit-card" style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+      <h3><i class="fab fa-venmo" style="color:#008CFF;margin-right:6px;"></i>Venmo</h3>
+      <p style="margin-bottom:auto;">Send directly to the club treasurer via Venmo. Tap the icon to open the app.</p>
+      <a href="https://venmo.com/Christopher-Walsh-192" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Venmo" style="width:auto;height:auto;padding:8px 18px;background:rgba(0,140,255,0.1);border-radius:5px;gap:8px;font-size:13px;font-weight:700;color:#008CFF;border:1px solid rgba(0,140,255,0.3);">
+        <i class="fab fa-venmo" style="font-size:20px;"></i>
+        <span style="font-family:'Lato',sans-serif;letter-spacing:0.05em;">Venmo</span>
+        <span class="tooltip">@Christopher-Walsh-192</span>
+      </a>
+    </div>
+    <div class="recruit-card green-top" style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+      <h3>Zelle</h3>
+      <p style="margin-bottom:auto;">Send via Zelle to the club treasurer. Tap the icon to open Zelle.</p>
+      <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Zelle" style="width:auto;height:auto;padding:8px 18px;background:rgba(109,30,212,0.1);border-radius:5px;gap:8px;font-size:13px;font-weight:700;color:#6d1ed4;border:1px solid rgba(109,30,212,0.3);">
+        <img src="Zelle-Symbol.png" alt="Zelle" style="width:20px;height:20px;border-radius:4px;" />
+        <span style="font-family:'Lato',sans-serif;letter-spacing:0.05em;">Zelle</span>
+        <span class="tooltip">201-774-0666</span>
+      </a>
+    </div>
+    <div class="recruit-card yellow-top" style="display:flex;flex-direction:column;gap:12px;">
+      <h3>Questions?</h3>
+      <p style="margin-bottom:auto;">Reach out to the alumni network directly with any questions about donations.</p>
+      <a href="mailto:christopherwalsh@gmail.com" class="btn-outline" style="text-align:center;margin-top:4px;color:var(--oxford);border-color:var(--oxford);">
+        Email Us
+      </a>
+    </div>
+  </div>
 </main>
 
 <!-- FOOTER -->
 <footer>
+  <!-- SUPPORT ROW -->
+  <div class="footer-support">
+    <span class="footer-support-label">Support DRFC</span>
+    <div class="footer-support-links">
+      <a href="https://venmo.com/Christopher-Walsh-192" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Venmo">
+        <i class="fab fa-venmo"></i>
+        <span class="tooltip">Venmo @Christopher-Walsh-192</span>
+      </a>
+      <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Zelle">
+        <img src="Zelle-Symbol.png" alt="Zelle" />
+        <span class="tooltip">Zelle 201-774-0666</span>
+      </a>
+    </div>
+    <div class="footer-contact">
+      <i class="fas fa-envelope" style="font-size:11px;"></i>
+      <a href="mailto:christopherwalsh@gmail.com">christopherwalsh@gmail.com</a>
+    </div>
+  </div>
+    <div class="footer-contact">
+      <i class="fas fa-envelope" style="font-size:11px;"></i>
+      <a href="mailto:christopherwalsh@gmail.com">christopherwalsh@gmail.com</a>
+    </div>
+  </div>
   <a href="index.html" class="footer-logo">
     <img src="DRFC-logo.png" alt="Drew RFC" />
     <span>Drew Rugby Football Club &middot; Est. 1963 &middot; Madison, NJ</span>

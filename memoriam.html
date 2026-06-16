@@ -115,6 +115,22 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
   footer { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; }
   .footer-logo { justify-content: center; }
 }
+
+/* FOOTER SUPPORT ROW */
+.footer-support { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; width: 100%; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2px; }
+.footer-support-label { color: rgba(255,255,255,0.35); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; white-space: nowrap; }
+.footer-support-links { display: flex; align-items: center; gap: 10px; }
+.footer-icon-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; text-decoration: none; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
+.footer-icon-btn:hover { transform: scale(1.12); opacity: 1; }
+.footer-icon-btn img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
+.footer-icon-btn .fab { font-size: 28px; color: #008CFF; }
+.footer-icon-btn .tooltip { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); color: #fff; font-size: 11px; font-weight: 600; font-family: 'Lato', sans-serif; white-space: nowrap; padding: 5px 10px; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.15s; letter-spacing: 0.04em; }
+.footer-icon-btn .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: rgba(0,0,0,0.85); }
+.footer-icon-btn:hover .tooltip { opacity: 1; }
+.footer-contact { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 12px; font-family: 'Lato', sans-serif; }
+.footer-contact a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.footer-contact a:hover { color: var(--yellow); }
+
 </style>
 </head>
 <body>
@@ -165,6 +181,29 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
 
 <!-- FOOTER -->
 <footer>
+  <!-- SUPPORT ROW -->
+  <div class="footer-support">
+    <span class="footer-support-label">Support DRFC</span>
+    <div class="footer-support-links">
+      <a href="https://venmo.com/Christopher-Walsh-192" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Venmo">
+        <i class="fab fa-venmo"></i>
+        <span class="tooltip">Venmo @Christopher-Walsh-192</span>
+      </a>
+      <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Zelle">
+        <img src="Zelle-Symbol.png" alt="Zelle" />
+        <span class="tooltip">Zelle 201-774-0666</span>
+      </a>
+    </div>
+    <div class="footer-contact">
+      <i class="fas fa-envelope" style="font-size:11px;"></i>
+      <a href="mailto:christopherwalsh@gmail.com">christopherwalsh@gmail.com</a>
+    </div>
+  </div>
+    <div class="footer-contact">
+      <i class="fas fa-envelope" style="font-size:11px;"></i>
+      <a href="mailto:christopherwalsh@gmail.com">christopherwalsh@gmail.com</a>
+    </div>
+  </div>
   <a href="index.html" class="footer-logo">
     <img src="DRFC-logo.png" alt="Drew RFC" />
     <span>Drew Rugby Football Club &middot; Est. 1963 &middot; Madison, NJ</span>

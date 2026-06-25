@@ -39,7 +39,7 @@
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'Lato', sans-serif; background: var(--off-white); color: var(--text-dark); }
-
+ 
 /* NAV */
 nav { background: var(--oxford-dark); border-bottom: 3px solid var(--green); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 68px; position: sticky; top: 0; z-index: 100; }
 .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
@@ -49,7 +49,7 @@ nav { background: var(--oxford-dark); border-bottom: 3px solid var(--green); dis
 .nav-links { display: flex; align-items: center; }
 .nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0 14px; height: 68px; display: flex; align-items: center; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: color 0.15s, border-color 0.15s; }
 .nav-links a:hover, .nav-links a.active { color: var(--white); border-bottom-color: var(--yellow); }
-
+ 
 /* PAGE HEADER */
 .page-header { background: var(--oxford); position: relative; padding: 2.5rem 2.5rem 2rem; display: flex; align-items: flex-end; gap: 20px; border-bottom: 4px solid var(--green); }
 .page-header::before, .page-header::after { content: ''; position: absolute; top: 0; bottom: 0; width: 7px; background: var(--green); }
@@ -65,23 +65,42 @@ nav { background: var(--oxford-dark); border-bottom: 3px solid var(--green); dis
 .page-breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
 .page-breadcrumb a:hover { color: var(--yellow); }
 .page-breadcrumb span { margin: 0 6px; }
-
+ 
 /* MAIN */
 main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
 .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--green); margin-bottom: 6px; }
 .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 0.06em; color: var(--oxford); margin-bottom: 1.5rem; }
-
+ 
 /* Placeholders */
 .section-placeholder { background: var(--white); border: 1px dashed var(--border); border-radius: 5px; padding: 3rem; text-align: center; margin-bottom: 3rem; }
 .section-placeholder p { color: var(--text-light); font-size: 14px; font-style: italic; }
 .section-placeholder a { color: var(--green); font-weight: 700; }
-
+ 
 /* Memoriam intro */
 .memoriam-intro { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--oxford); border-radius: 5px; padding: 1.75rem; margin-bottom: 2rem; }
 .memoriam-intro p { font-size: 15px; color: var(--text-mid); line-height: 1.8; font-weight: 300; }
-
+.memoriam-intro p + p { margin-top: 10px; }
+ 
+/* Memorial list */
+.memorial-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 3rem; }
+.memorial-entry { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--oxford); border-radius: 4px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 2px; }
+.memorial-name { font-size: 14px; font-weight: 700; color: var(--text-dark); }
+.memorial-detail { font-size: 12px; color: var(--text-light); }
+.memorial-detail a { color: var(--green); text-decoration: none; font-weight: 700; }
+.memorial-detail a:hover { text-decoration: underline; }
+.memorial-note { font-size: 12px; color: var(--text-light); font-style: italic; margin-bottom: 2rem; }
+.memorial-incomplete-note { background: var(--white); border: 1px dashed var(--border); border-radius: 5px; padding: 1.5rem; margin-bottom: 2.5rem; }
+.memorial-incomplete-note p { color: var(--text-mid); font-size: 14px; line-height: 1.7; font-weight: 300; }
+.memorial-incomplete-note a { color: var(--green); font-weight: 700; text-decoration: none; }
+.memorial-incomplete-note a:hover { text-decoration: underline; }
+ 
+@media (max-width: 700px) {
+  .memorial-list { grid-template-columns: 1fr; }
+}
+ 
+ 
 /* FOOTER */
-footer { background: var(--oxford-dark); border-top: 4px solid var(--green); padding: 1.75rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+footer { background: var(--oxford-dark); border-top: 4px solid var(--green); padding: 1.75rem 2.5rem; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
 .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .footer-logo img { width: 40px; height: 40px; object-fit: contain; }
 .footer-logo span { color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 300; }
@@ -102,11 +121,11 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
 .footer-icon-btn .tooltip { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.88); color: #fff; font-size: 11px; font-weight: 600; font-family: 'Lato', sans-serif; white-space: nowrap; padding: 5px 10px; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.15s; letter-spacing: 0.04em; z-index: 10; }
 .footer-icon-btn .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: rgba(0,0,0,0.88); }
 .footer-icon-btn:hover .tooltip { opacity: 1; }
-
+ 
 </style>
 </head>
 <body>
-
+ 
 <!-- NAVIGATION -->
 <nav>
   <a href="index.html" class="nav-logo">
@@ -124,7 +143,7 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
     <a href="index.html#recruit">Get Involved</a>
   </div>
 </nav>
-
+ 
 <!-- PAGE HEADER -->
 <div class="page-header">
   <img src="DRFC-logo.png" alt="Drew RFC Crest" class="page-header-crest" />
@@ -137,17 +156,140 @@ footer { background: var(--oxford-dark); border-top: 4px solid var(--green); pad
 <div class="page-breadcrumb">
   <a href="index.html">Home</a><span>&rsaquo;</span> In Memoriam
 </div>
-
+ 
 <!-- MAIN CONTENT -->
 <main>
   <div class="memoriam-intro">
-    <p>We honor those who played for Drew Rugby Football Club and have since passed. Their spirit lives on in every match played, every bond forged on the pitch, and every friendship that has endured for decades. This page is a permanent tribute to the players who gave so much to this club and to each other.</p>
+    <p>Having been around now for over 60 years, DRFC (and DWRFC) have lost many former players. Below is the list constructed by numerous alums from all eras. While the list is sadly long, it&rsquo;s definitely incomplete.</p>
+    <p>You can submit others <a href="index.html#recruit">here</a>. Please include as much information as you know. We have entered information for some of those listed. Information will be added for the rest, assuming there&rsquo;s information available online. Please <a href="index.html#recruit">contact us</a> if you have additions or details.</p>
   </div>
-
+ 
   <div class="section-label">Tributes</div>
   <div class="section-title">Remembering Our Brothers</div>
-  <div class="section-placeholder">
-    <p>Names and tributes coming soon. If you would like to submit a name or tribute, please reach out to the alumni network or contact us through the <a href="index.html#recruit">Get Involved</a> form.</p>
+ 
+  <div class="memorial-list">
+    <div class="memorial-entry">
+      <div class="memorial-name">Jack Bosworth</div>
+      <div class="memorial-detail">C&rsquo;71 &middot; 1949&ndash;1975 &middot; <a href="https://www.boltonscholarshipfund.org/files/pdf/bosworth.pdf" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Frank Brady</div>
+      <div class="memorial-detail">C&rsquo;75 &middot; 1953&ndash;2019 &middot; <a href="https://www.kuhnfuneralhomes.com/obituaries/francis-brady" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Dominic Cannavo</div>
+      <div class="memorial-detail">C&rsquo;81 &middot; Deceased 2018, age 59 &middot; due to <a href="https://www.nj.com/essex/2017/02/plane_that_plummeted_into_nj_neighborhood_lost_eng.html" target="_blank" rel="noopener noreferrer">injuries from a plane crash</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Jon &ldquo;Steve&rdquo; Carnahan</div>
+      <div class="memorial-detail">Coach, late 1960s &middot; <a href="https://obits.nj.com/us/obituaries/southjerseytimes/name/jon-carnahan-obituary?id=8718238" target="_blank" rel="noopener noreferrer">Deceased 2017, age 73</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Bryan Case</div>
+      <div class="memorial-detail">C&rsquo;10 &middot; 1987&ndash;2011 &middot; <a href="https://www.dignitymemorial.com/obituaries/springfield-va/bryan-case-4635206" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Joel Cohen <span style="font-weight:400;color:var(--text-light);">(&ldquo;Spackler&rdquo;)</span></div>
+      <div class="memorial-detail">C&rsquo;04 &middot; Deceased 2023</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Rory Corrigan</div>
+      <div class="memorial-detail">1950&ndash;2026 &middot; <a href="https://www.coxrichmondhillfh.com/obituary/rory-corrigan" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Ben Davol</div>
+      <div class="memorial-detail">C&rsquo;82 &middot; 1960&ndash;2018 &middot; <a href="https://www.mysticfuneralhome.com/obituaries/Benjamin-D-Davol?obId=44917690" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Ken Davis</div>
+      <div class="memorial-detail">C&rsquo;76 &middot; <a href="https://www.legacy.com/us/obituaries/legacyremembers/kenneth-davis-obituary?id=14785881" target="_blank" rel="noopener noreferrer">Deceased 2016, age 62</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Soc Deacon</div>
+      <div class="memorial-detail">C&rsquo;82 &middot; 1959&ndash;2016 &middot; <a href="https://www.courant.com/obituaries/arthur-david-deacon-simsbury-ct/" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Eric Dubit</div>
+      <div class="memorial-detail">C&rsquo;82 &middot; 1960&ndash;2103* &middot; <a href="https://obituaries.durangoherald.com/us/obituaries/durangoherald/name/eric-dubit-obituary?id=44671645" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Dave Feldman</div>
+      <div class="memorial-detail">C&rsquo;70</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Greg Johnson</div>
+      <div class="memorial-detail">C&rsquo;69</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Toni (Koch) Kampf</div>
+      <div class="memorial-detail">C&rsquo;06 &middot; 1983&ndash;2018 &middot; <a href="https://www.legacy.com/us/obituaries/inquirer/name/toni-kampf-obituary?id=9279630" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Bob Luton</div>
+      <div class="memorial-detail">T&rsquo;67 &middot; 1942&ndash;1999 &middot; <a href="https://www.findagrave.com/memorial/14236924/robert-allen-luton" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Mike Lescault</div>
+      <div class="memorial-detail">C&rsquo;70</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">John Marinaro</div>
+      <div class="memorial-detail">C&rsquo;70 &middot; 1948&ndash;2016 &middot; <a href="https://www.legacy.com/us/obituaries/mycentraljersey/name/john-marinaro-obituary?id=10068776" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Kundai Marowa</div>
+      <div class="memorial-detail">C&rsquo;18 &middot; 1994&ndash;2016* &middot; <a href="https://thedrewacorn.com/2016/12/05/drew-remembers-student-and-beloved-friend/" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Seth X. Metzger</div>
+      <div class="memorial-detail">C&rsquo;71</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Bill Muscato</div>
+      <div class="memorial-detail">C&rsquo;75 &middot; 1952&ndash;2020 &middot; <a href="https://www.obrienfuneralhome.com/obituaries/William-C-Muscato?obId=19229753" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Nils Osterberg</div>
+      <div class="memorial-detail">C&rsquo;82 &middot; 1959&ndash;2023 &middot; <a href="https://jjffh.com/tribute/details/1009/Nils-Osterberg/family-login.html?proxy=original" target="_blank" rel="noopener noreferrer">Obituary</a> &middot; <a href="https://www.echovita.com/us/obituaries/ny/white-plains/nils-g-osterberg-16024642" target="_blank" rel="noopener noreferrer">(also here)</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Warren Paul</div>
+      <div class="memorial-detail">C&rsquo;78 &middot; <a href="https://www.legacy.com/us/obituaries/inquirer/name/warren-paul-obituary?id=11051787" target="_blank" rel="noopener noreferrer">Deceased 2005</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Larry Pierre</div>
+      <div class="memorial-detail">C&rsquo;13 &middot; Deceased 2011, age 19</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Ralph Scoville</div>
+      <div class="memorial-detail">C&rsquo;80 &middot; 1958&ndash;2022 &middot; <a href="https://normandean.com/tribute/details/11045/Ralph-Scoville-III/obituary.html" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Charlie Seidel</div>
+      <div class="memorial-detail">C&rsquo;78 &middot; 1956&ndash;2019 &middot; <a href="https://www.fairfaxmemorialfuneralhome.com/obituaries/Charles-B-Seidel?obId=4414079" target="_blank" rel="noopener noreferrer">Obituary</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Frank Shitemi</div>
+      <div class="memorial-detail">C&rsquo;83 &middot; Deceased 2018, age 58</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Brad Toll</div>
+      <div class="memorial-detail">C&rsquo;81 &middot; <a href="https://www.legacy.com/us/obituaries/inquirer/name/bradley-toll-obituary?id=36283490" target="_blank" rel="noopener noreferrer">Deceased 2022</a></div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Perry Walinsky</div>
+      <div class="memorial-detail">C&rsquo;80</div>
+    </div>
+    <div class="memorial-entry">
+      <div class="memorial-name">Bob Wolff</div>
+      <div class="memorial-detail">C&rsquo;80</div>
+    </div>
+  </div>
+ 
+  <p class="memorial-note">* Check in on your (former) teammates &mdash; and friends.</p>
+ 
+  <div class="memorial-incomplete-note">
+    <p>This list is incomplete. If you know of someone who should be added, or have corrections or additional details, please <a href="index.html#recruit">contact us</a> through the form on the homepage, or reach out directly via the footer below.</p>
   </div>
 </main>
 

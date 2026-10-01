@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="DRFC-logo.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Photos &mdash; Drew Rugby Football Club</title>
+<meta name="description" content="Drew Rugby Football Club match photos from 2002–2008 — action from games against Columbia, Hofstra, Vassar, Montclair, Binghamton, Seton Hall, Bard, Stony Brook, and the 2008 Alumni Game." />
+<meta name="keywords" content="Drew Rugby photos, DRFC match photos, Drew University Rugby, Drew RFC history" />
+<meta name="author" content="Drew Rugby Football Club Alumni" />
+<meta property="og:title" content="Photos — Drew Rugby Football Club" />
+<meta property="og:description" content="Match photos from Drew Rugby Football Club, 2002–2008." />
+<meta property="og:image" content="https://drewrfc.org/DRFC-logo.png" />
+<meta property="og:url" content="https://drewrfc.org/photos.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Photos — Drew Rugby Football Club" />
+<meta name="twitter:description" content="Match photos from Drew Rugby Football Club, 2002–2008." />
+<meta name="twitter:image" content="https://drewrfc.org/DRFC-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --oxford: #0C2F59;
+  --oxford-dark: #071E3D;
+  --oxford-mid: #0F3D6E;
+  --green: #004E32;
+  --green-dark: #003322;
+  --yellow: #f5d20a;
+  --white: #ffffff;
+  --off-white: #f4f4f2;
+  --text-dark: #111111;
+  --text-mid: #444444;
+  --text-light: #777777;
+  --border: #dddddd;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Lato', sans-serif; background: var(--off-white); color: var(--text-dark); }
+
+/* NAV */
+nav { background: var(--oxford-dark); border-bottom: 3px solid var(--green); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 68px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 4px; }
+.nav-wordmark { color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.12em; line-height: 1; }
+.nav-wordmark span { color: var(--yellow); }
+.nav-links { display: flex; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0 14px; height: 68px; display: flex; align-items: center; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: color 0.15s, border-color 0.15s; }
+.nav-links a:hover, .nav-links a.active { color: var(--white); border-bottom-color: var(--yellow); }
+
+/* PAGE HEADER */
+.page-header { background: var(--oxford); position: relative; padding: 2.5rem 2.5rem 2rem; display: flex; align-items: flex-end; gap: 20px; border-bottom: 4px solid var(--green); }
+.page-header::before, .page-header::after { content: ''; position: absolute; top: 0; bottom: 0; width: 7px; background: var(--green); }
+.page-header::before { left: 0; }
+.page-header::after { right: 0; }
+.page-header-crest { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4)); }
+.page-header-text { position: relative; z-index: 2; }
+.page-header-label { display: inline-block; background: var(--green); color: var(--yellow); font-size: 10px; font-weight: 700; padding: 3px 12px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 8px; }
+.page-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 1; color: var(--white); letter-spacing: 0.04em; }
+.page-header h1 span { color: var(--yellow); }
+.page-header-sub { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 300; font-style: italic; margin-top: 6px; }
+.page-breadcrumb { background: var(--oxford-mid); padding: 10px 2.5rem; font-size: 12px; color: rgba(255,255,255,0.45); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.page-breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.page-breadcrumb a:hover { color: var(--yellow); }
+.page-breadcrumb span { margin: 0 6px; }
+
+/* MAIN */
+main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+.section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--green); margin-bottom: 6px; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 0.06em; color: var(--oxford); margin-bottom: 1.5rem; }
+
+/* MATCH BLOCKS */
+.match-block { margin-bottom: 2.5rem; }
+.match-header { background: var(--oxford); border-radius: 5px 5px 0 0; padding: 0.85rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.match-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.08em; color: var(--white); }
+.match-badge { background: var(--green); color: var(--yellow); font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.12em; white-space: nowrap; }
+.match-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; background: var(--border); border: 1px solid var(--border); border-top: none; border-radius: 0 0 5px 5px; overflow: hidden; }
+.match-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+.match-photo { position: relative; overflow: hidden; aspect-ratio: 4/3; background: var(--oxford-dark); cursor: pointer; }
+.match-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease, opacity 0.2s; }
+.match-photo:hover img { transform: scale(1.04); }
+.match-photo-overlay { position: absolute; inset: 0; background: rgba(7,30,61,0); transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+.match-photo:hover .match-photo-overlay { background: rgba(7,30,61,0.25); }
+.match-photo-overlay i { color: rgba(255,255,255,0); font-size: 24px; transition: color 0.2s; }
+.match-photo:hover .match-photo-overlay i { color: rgba(255,255,255,0.8); }
+
+/* LIGHTBOX */
+.lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 999; align-items: center; justify-content: center; padding: 1.5rem; }
+.lightbox.open { display: flex; }
+.lightbox-inner { position: relative; max-width: 92vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.lightbox-inner img { max-width: 88vw; max-height: 78vh; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 48px rgba(0,0,0,0.7); }
+.lightbox-caption { color: rgba(255,255,255,0.5); font-size: 13px; font-style: italic; text-align: center; }
+.lightbox-close { position: fixed; top: 1.25rem; right: 1.5rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); font-size: 22px; line-height: 1; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s; }
+.lightbox-close:hover { background: rgba(255,255,255,0.25); color: var(--white); }
+.lightbox-nav { display: flex; gap: 16px; }
+.lightbox-nav button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--white); padding: 8px 22px; border-radius: 3px; font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; cursor: pointer; transition: background 0.15s; letter-spacing: 0.05em; }
+.lightbox-nav button:hover { background: rgba(255,255,255,0.22); }
+.lightbox-counter { color: rgba(255,255,255,0.35); font-size: 12px; }
+
+/* FOOTER */
+footer { background: var(--oxford-dark); border-top: 4px solid var(--green); padding: 1.75rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.footer-tagline { color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.1em; opacity: 0.8; align-self: center; }
+.footer-copy { color: rgba(255,255,255,0.25); font-size: 11px; width: 100%; text-align: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+.footer-copy a { color: var(--yellow); text-decoration: none; opacity: 0.7; }
+.footer-copy a:hover { opacity: 1; }
+.footer-icon-col { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.footer-icon-col-label { color: rgba(255,255,255,0.3); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+.footer-icon-group { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.footer-icon-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 8px; text-decoration: none; transition: transform 0.15s, opacity 0.15s; opacity: 0.7; }
+.footer-icon-btn:hover { transform: scale(1.12); opacity: 1; }
+.footer-icon-btn img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
+.footer-icon-btn i { font-size: 26px; }
+.footer-icon-btn .fa-facebook-square { color: #1877F2; }
+.footer-icon-btn .fa-envelope { color: rgba(255,255,255,0.6); font-size: 22px; }
+.footer-icon-btn .tooltip { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.88); color: #fff; font-size: 11px; font-weight: 600; font-family: 'Lato', sans-serif; white-space: nowrap; padding: 5px 10px; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.15s; letter-spacing: 0.04em; z-index: 10; }
+.footer-icon-btn .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: rgba(0,0,0,0.88); }
+.footer-icon-btn:hover .tooltip { opacity: 1; }
+
+/* HAMBURGER */
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; height: 60px; }
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--oxford-dark); border-bottom: 3px solid var(--green); flex-direction: column; padding: 0.5rem 0; z-index: 199; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+  .nav-links.open { display: flex; }
+  .nav-links a { height: auto; padding: 14px 1.5rem; border-bottom: none; border-left: 3px solid transparent; margin-bottom: 0; font-size: 13px; border-top: 0.5px solid rgba(255,255,255,0.06); }
+  .nav-links a:hover, .nav-links a.active { border-bottom: none; border-left-color: var(--yellow); background: rgba(255,255,255,0.04); }
+  .nav-wordmark { font-size: 18px; }
+  .page-header { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .page-header-crest { width: 52px; height: 52px; }
+  .page-header h1 { font-size: 36px; }
+  .page-breadcrumb { padding: 10px 1.25rem; }
+  main { padding: 2rem 1.25rem; }
+  .section-title { font-size: 26px; margin-bottom: 1rem; }
+  .match-grid, .match-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+  footer { flex-direction: column; align-items: center; text-align: center; padding: 1.5rem 1.25rem; }
+}
+@media (max-width: 440px) {
+  .match-grid, .match-grid.two-col { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="DRFC-logo.png" alt="Drew RFC Crest" />
+    <div class="nav-wordmark">Drew <span>RFC</span></div>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="hof.html">Hall of Fame</a>
+    <a href="memoriam.html">In Memoriam</a>
+    <a href="photos.html" class="active">Photos</a>
+    <a href="index.html#recruit">Get Involved</a>
+    <a href="index.html#support">Support</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <img src="DRFC-logo.png" alt="Drew RFC Crest" class="page-header-crest" />
+  <div class="page-header-text">
+    <div class="page-header-label">Drew University &middot; 2002&ndash;2008</div>
+    <h1>Match <span>Photos</span></h1>
+    <p class="page-header-sub">Action from the pitch &mdash; highlights from a half-decade of Drew Rugby.</p>
+  </div>
+</div>
+<div class="page-breadcrumb">
+  <a href="index.html">Home</a><span>&rsaquo;</span> Photos
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="section-label">2002&ndash;2008</div>
+  <div class="section-title">On the Pitch</div>
+
+  <!-- COLUMBIA FALL '02 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Columbia</span>
+      <span class="match-badge">Fall 2002</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Columbia &mdash; Fall 2002">
+        <img src="photos/columbia-fall-02-1.jpg" alt="Drew RFC vs Columbia, Fall 2002" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Columbia &mdash; Fall 2002">
+        <img src="photos/columbia-fall-02-2.jpg" alt="Drew RFC vs Columbia, Fall 2002" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Columbia &mdash; Fall 2002">
+        <img src="photos/columbia-fall-02-3.jpg" alt="Drew RFC vs Columbia, Fall 2002" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOFSTRA FALL '02 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Hofstra</span>
+      <span class="match-badge">Fall 2002</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Hofstra &mdash; Fall 2002">
+        <img src="photos/hofstra-fall-02-1.jpg" alt="Drew RFC vs Hofstra, Fall 2002" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Hofstra &mdash; Fall 2002">
+        <img src="photos/hofstra-fall-02-2.jpg" alt="Drew RFC vs Hofstra, Fall 2002" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Hofstra &mdash; Fall 2002">
+        <img src="photos/hofstra-fall-02-3.jpg" alt="Drew RFC vs Hofstra, Fall 2002" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VASSAR FALL '03 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Vassar</span>
+      <span class="match-badge">Fall 2003</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Vassar &mdash; Fall 2003">
+        <img src="photos/vassar-fall-03-1.jpg" alt="Drew RFC vs Vassar, Fall 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Vassar &mdash; Fall 2003">
+        <img src="photos/vassar-fall-03-2.jpg" alt="Drew RFC vs Vassar, Fall 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Vassar &mdash; Fall 2003">
+        <img src="photos/vassar-fall-03-3.jpg" alt="Drew RFC vs Vassar, Fall 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MONTCLAIR FALL '03 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Montclair</span>
+      <span class="match-badge">Fall 2003</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Montclair &mdash; Fall 2003">
+        <img src="photos/montclair-fall-03-1.jpg" alt="Drew RFC vs Montclair, Fall 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Montclair &mdash; Fall 2003">
+        <img src="photos/montclair-fall-03-2.jpg" alt="Drew RFC vs Montclair, Fall 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Montclair &mdash; Fall 2003">
+        <img src="photos/montclair-fall-03-3.jpg" alt="Drew RFC vs Montclair, Fall 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BINGHAMTON SPRING '03 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">Binghamton Road Trip</span>
+      <span class="match-badge">Spring 2003</span>
+    </div>
+    <div class="match-grid two-col">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="Binghamton road trip &mdash; Spring 2003">
+        <img src="photos/binghamton-spring-03-1.jpg" alt="Drew RFC Binghamton road trip, Spring 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="Binghamton road trip &mdash; Spring 2003">
+        <img src="photos/binghamton-spring-03-2.jpg" alt="Drew RFC Binghamton road trip, Spring 2003" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETON HALL SPRING '05 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Seton Hall</span>
+      <span class="match-badge">Spring 2005</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Seton Hall &mdash; Spring 2005">
+        <img src="photos/setonhall-spring-05-1.jpg" alt="Drew RFC vs Seton Hall, Spring 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Seton Hall &mdash; Spring 2005">
+        <img src="photos/setonhall-spring-05-2.jpg" alt="Drew RFC vs Seton Hall, Spring 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Seton Hall &mdash; Spring 2005">
+        <img src="photos/setonhall-spring-05-3.jpg" alt="Drew RFC vs Seton Hall, Spring 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BARD SPRING '05 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Bard</span>
+      <span class="match-badge">Spring 2005</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Bard &mdash; Spring 2005">
+        <img src="photos/bard-spring-05-1.jpg" alt="Drew RFC vs Bard, Spring 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Bard &mdash; Spring 2005">
+        <img src="photos/bard-spring-05-2.jpg" alt="Drew RFC vs Bard, Spring 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Bard &mdash; Spring 2005">
+        <img src="photos/bard-spring-05-3.jpg" alt="Drew RFC vs Bard, Spring 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BARD FALL '05 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Bard</span>
+      <span class="match-badge">Fall 2005</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Bard &mdash; Fall 2005">
+        <img src="photos/bard-fall-05-1.jpg" alt="Drew RFC vs Bard, Fall 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Bard &mdash; Fall 2005">
+        <img src="photos/bard-fall-05-2.jpg" alt="Drew RFC vs Bard, Fall 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Bard &mdash; Fall 2005">
+        <img src="photos/bard-fall-05-3.jpg" alt="Drew RFC vs Bard, Fall 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STONY BROOK FALL '05 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">vs. Stony Brook</span>
+      <span class="match-badge">Fall 2005</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Stony Brook &mdash; Fall 2005">
+        <img src="photos/stonybrook-fall-05-1.jpg" alt="Drew RFC vs Stony Brook, Fall 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Stony Brook &mdash; Fall 2005">
+        <img src="photos/stonybrook-fall-05-2.jpg" alt="Drew RFC vs Stony Brook, Fall 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="vs. Stony Brook &mdash; Fall 2005">
+        <img src="photos/stonybrook-fall-05-3.jpg" alt="Drew RFC vs Stony Brook, Fall 2005" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALUMNI GAME SPRING '08 -->
+  <div class="match-block">
+    <div class="match-header">
+      <span class="match-title">Alumni Game</span>
+      <span class="match-badge">Spring 2008</span>
+    </div>
+    <div class="match-grid">
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="Alumni Game &mdash; Spring 2008">
+        <img src="photos/alumni-spring-08-1.jpg" alt="Drew RFC Alumni Game, Spring 2008" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="Alumni Game &mdash; Spring 2008">
+        <img src="photos/alumni-spring-08-2.jpg" alt="Drew RFC Alumni Game, Spring 2008" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+      <div class="match-photo" onclick="openLightbox(this)" data-caption="Alumni Game &mdash; Spring 2008">
+        <img src="photos/alumni-spring-08-3.jpg" alt="Drew RFC Alumni Game, Spring 2008" loading="lazy" />
+        <div class="match-photo-overlay"><i class="fa-solid fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <div class="lightbox-nav">
+      <button onclick="lightboxNav(-1)">&#8592; Prev</button>
+      <button onclick="lightboxNav(1)">Next &#8594;</button>
+    </div>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-icon-col">
+    <span class="footer-icon-col-label">Connect</span>
+    <div class="footer-icon-group">
+      <a href="https://www.facebook.com/DrewRugby/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-square"></i>
+        <span class="tooltip">Facebook</span>
+      </a>
+      <a href="mailto:christopherwalsh@gmail.com" class="footer-icon-btn" aria-label="Email us">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="tooltip">christopherwalsh@gmail.com</span>
+      </a>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+    <a href="index.html">
+      <img src="DRFC-logo.png" alt="Drew RFC" style="width:52px;height:52px;object-fit:contain;" />
+    </a>
+    <div class="footer-tagline">Forged at Drew, Proven Everywhere.</div>
+  </div>
+  <div class="footer-icon-col">
+    <span class="footer-icon-col-label">Support</span>
+    <div class="footer-icon-group">
+      <a href="https://venmo.com/Christopher-Walsh-192" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Venmo">
+        <img src="Venmo-logo.png" alt="Venmo" />
+        <span class="tooltip">Venmo @Christopher-Walsh-192</span>
+      </a>
+      <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Zelle">
+        <img src="Zelle-Symbol.png" alt="Zelle" />
+        <span class="tooltip">Zelle 201-774-0666</span>
+      </a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    &copy; Drew Rugby Football Club Alumni. All rights reserved. &nbsp;|&nbsp;
+    Site designed &amp; maintained by <a href="https://noros.life" target="_blank">Noros Solutions</a>
+  </div>
+</footer>
+
+<script>
+  // Nav hamburger
+  const toggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.classList.remove('open');
+      navMenu.classList.remove('open');
+    });
+  });
+
+  // Lightbox
+  let allPhotos = [];
+  let currentIndex = 0;
+
+  function buildPhotoList() {
+    allPhotos = Array.from(document.querySelectorAll('.match-photo'));
+  }
+
+  function openLightbox(el) {
+    buildPhotoList();
+    currentIndex = allPhotos.indexOf(el);
+    showPhoto(currentIndex);
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showPhoto(index) {
+    const el = allPhotos[index];
+    const img = el.querySelector('img');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox-caption').innerHTML = el.dataset.caption || '';
+    document.getElementById('lightbox-counter').textContent = (index + 1) + ' / ' + allPhotos.length;
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeLightboxOutside(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+
+  function lightboxNav(dir) {
+    currentIndex = (currentIndex + dir + allPhotos.length) % allPhotos.length;
+    showPhoto(currentIndex);
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+</script>
+</body>
+</html>

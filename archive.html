@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="DRFC-logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Archive — Drew Rugby Football Club</title>
+  <meta name="description" content="Historical photo archive of Drew Rugby Football Club — from the founding era through the 1980s and beyond." />
+  <meta name="author" content="Drew Rugby Football Club Alumni" />
+  <meta property="og:title" content="Photo Archive — Drew Rugby Football Club" />
+  <meta property="og:description" content="Historical photo archive of DRFC, compiled from Drew University archives, yearbooks, and alumni collections." />
+  <meta property="og:image" content="https://drewrfc.org/DRFC-logo.png" />
+  <meta property="og:url" content="https://drewrfc.org/archive.html" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --oxford: #0C2F59;
+      --oxford-dark: #071E3D;
+      --oxford-mid: #0F3D6E;
+      --green: #004E32;
+      --green-dark: #003322;
+      --yellow: #f5d20a;
+      --white: #ffffff;
+      --off-white: #f4f4f2;
+      --sepia: #f5f0e8;
+      --sepia-dark: #e8dfc8;
+      --text-dark: #111111;
+      --text-mid: #444444;
+      --text-light: #777777;
+      --border: #dddddd;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: var(--off-white); color: var(--text-dark); }
+
+    /* NAV */
+    nav {
+      background: var(--oxford-dark);
+      border-bottom: 3px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 68px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 4px; }
+    .nav-wordmark { color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.12em; line-height: 1; }
+    .nav-wordmark span { color: var(--yellow); }
+    .nav-links { display: flex; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0 14px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -3px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); border-bottom-color: var(--yellow); }
+
+    /* HAMBURGER */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.2s; }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--oxford-dark); flex-direction: column; padding: 12px 0; border-bottom: 3px solid var(--green); z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links a { height: auto; padding: 12px 2rem; border-bottom: none; border-left: 3px solid transparent; margin-bottom: 0; }
+      .nav-links a:hover, .nav-links a.active { border-bottom: none; border-left-color: var(--yellow); }
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--oxford);
+      padding: 2.5rem 2rem 2rem;
+      border-bottom: 4px solid var(--green);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before, .page-header::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 5px;
+      background: var(--green);
+    }
+    .page-header::before { left: 0; }
+    .page-header::after { right: 0; }
+    .page-header-inner { max-width: 860px; margin: 0 auto; }
+    .page-breadcrumb {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 10px;
+    }
+    .page-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+    .page-breadcrumb a:hover { color: var(--yellow); }
+    .page-breadcrumb span { margin: 0 6px; }
+    .page-header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+    .page-header h1 span { color: var(--yellow); }
+    .page-header-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    /* MAIN */
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+
+    /* SOURCE NOTE */
+    .source-note {
+      background: var(--sepia);
+      border-left: 4px solid var(--oxford);
+      border-radius: 4px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3rem;
+    }
+    .source-note h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      color: var(--oxford);
+      margin-bottom: 10px;
+    }
+    .source-note p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-mid);
+    }
+    .source-note .compiled {
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* ERA SECTIONS */
+    .era-section { margin-bottom: 4rem; }
+    .era-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--sepia-dark);
+    }
+    .era-badge {
+      background: var(--oxford);
+      color: var(--yellow);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      padding: 5px 14px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .era-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.06em;
+      color: var(--oxford);
+    }
+    .era-count {
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* PHOTO GRID */
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .archive-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .archive-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+    .archive-thumb {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--sepia-dark);
+    }
+    .archive-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+      filter: sepia(15%);
+    }
+    .archive-item:hover .archive-thumb img { transform: scale(1.04); }
+    .archive-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(12,47,89,0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .archive-overlay i {
+      color: var(--white);
+      font-size: 24px;
+      opacity: 0;
+      transition: opacity 0.2s;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .archive-item:hover .archive-overlay { background: rgba(12,47,89,0.35); }
+    .archive-item:hover .archive-overlay i { opacity: 1; }
+    .archive-caption {
+      padding: 10px 12px 12px;
+      font-size: 12px;
+      line-height: 1.55;
+      color: var(--text-mid);
+      min-height: 44px;
+      font-style: italic;
+    }
+    .archive-caption.no-caption { color: var(--text-light); font-style: normal; }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 78vh;
+      object-fit: contain;
+      border-radius: 3px;
+      filter: sepia(10%);
+    }
+    .lightbox-caption {
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      font-style: italic;
+      text-align: center;
+      margin-top: 14px;
+      max-width: 680px;
+      line-height: 1.6;
+    }
+    .lightbox-counter {
+      color: rgba(255,255,255,0.4);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 20px; right: 24px;
+      background: none; border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.15s;
+      z-index: 1001;
+    }
+    .lightbox-close:hover { color: var(--white); }
+    .lightbox-prev, .lightbox-next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: var(--white);
+      font-size: 22px;
+      width: 48px; height: 64px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      transition: background 0.15s;
+      z-index: 1001;
+    }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.2); }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+
+    /* FOOTER */
+    footer {
+      background: var(--oxford-dark);
+      border-top: 3px solid var(--green);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-icon-col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .footer-icon-col-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer-icon-group { display: flex; gap: 12px; align-items: center; }
+    .footer-icon-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      color: rgba(255,255,255,0.6);
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-icon-btn img { width: 22px; height: 22px; object-fit: contain; opacity: 0.65; transition: opacity 0.15s; }
+    .footer-icon-btn:hover { color: var(--white); }
+    .footer-icon-btn:hover img { opacity: 1; }
+    .footer-icon-btn .tooltip {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.85);
+      color: var(--white);
+      font-size: 11px;
+      white-space: nowrap;
+      padding: 4px 10px;
+      border-radius: 3px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .footer-icon-btn:hover .tooltip { opacity: 1; }
+    .footer-tagline {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .page-header h1 { font-size: 36px; }
+      .archive-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .era-header { flex-wrap: wrap; gap: 8px; }
+      .era-count { margin-left: 0; }
+      footer { flex-direction: column; align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="DRFC-logo.png" alt="Drew RFC crest" />
+    <div class="nav-wordmark">Drew <span>RFC</span></div>
+  </a>
+  <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="hof.html">Hall of Fame</a>
+    <a href="memoriam.html">In Memoriam</a>
+    <a href="photos.html">Photos</a>
+    <a href="archive.html" class="active">Archive</a>
+    <a href="index.html#recruit">Get Involved</a>
+    <a href="index.html#support">Support</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span> Photo Archive
+    </div>
+    <h1>Photo <span>Archive</span></h1>
+    <p class="page-header-sub">Historical photos from the Drew University archives, yearbooks, and alumni collections — from the founding era through the present day.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- SOURCE NOTE -->
+  <div class="source-note">
+    <h2>About This Archive</h2>
+    <p>Source material for this history comes from The Drew University archives. Issues of the <em>Drew Acorn</em> were recently digitized. The <em>Drew Oak Leaves</em> Yearbooks are not yet digitized, but Matthew Beland of the Drew Library staff was very helpful and rounded up the yearbooks of the era and scanned the pages. All have been used to create a chronology beginning in 1963 at the club's founding. Acorn articles were a function of what the student editorial staff thought about coverage of a club sport at the time. As rugby was new there was only one article from 1963 and there were none in 1964. As rugby on campus grew so did the coverage — three articles in Fall 1965, four in 1966, nine in 1967, twelve in 1968, seven in 1969, and then sadly only six from 1970 to 1973. Supplemented by yearbook pictures and the 50th Anniversary piece in the <em>Drew</em> magazine, there is a reasonable history of the Club during that period.</p>
+    <p class="compiled">Compiled by the Drew Alumni Office, 2022</p>
+  </div>
+
+  <!-- ERA: FOUNDING -->
+  <section class="era-section" id="founding">
+    <div class="era-header">
+      <div class="era-badge">EST. 1963</div>
+      <div class="era-title">The Founding Era</div>
+      <div class="era-count">1 photo</div>
+    </div>
+    <div class="archive-grid" data-era="founding">
+      <div class="archive-item" data-index="0" onclick="openLightbox('founding', 0)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1963-era-01.jpg" alt="Drew Rugby founding era" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Drew Rugby Football Club — founding era, 1963</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERA: 1970s -->
+  <section class="era-section" id="1970s">
+    <div class="era-header">
+      <div class="era-badge">1970s</div>
+      <div class="era-title">The Seventies</div>
+      <div class="era-count">5 photos</div>
+    </div>
+    <div class="archive-grid" data-era="1970s">
+      <div class="archive-item" data-index="0" onclick="openLightbox('1970s', 0)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1970s-01.jpg" alt="Drew RFC 1970s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, 1970s</div>
+      </div>
+      <div class="archive-item" data-index="1" onclick="openLightbox('1970s', 1)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1970s-02.jpg" alt="Drew RFC Fall 1977" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Most likely Fall 1977</div>
+      </div>
+      <div class="archive-item" data-index="2" onclick="openLightbox('1970s', 2)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1970s-03.jpg" alt="Drew RFC 1970s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, 1970s</div>
+      </div>
+      <div class="archive-item" data-index="3" onclick="openLightbox('1970s', 3)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1970s-04.jpg" alt="Drew RFC 1970s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, 1970s</div>
+      </div>
+      <div class="archive-item" data-index="4" onclick="openLightbox('1970s', 4)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1970s-05.jpg" alt="Tom Tani C78" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Tom Tani C78 keeping the backs honest</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERA: 1980s -->
+  <section class="era-section" id="1980s">
+    <div class="era-header">
+      <div class="era-badge">1980s</div>
+      <div class="era-title">The Golden Era</div>
+      <div class="era-count">29 photos</div>
+    </div>
+    <div class="archive-grid" data-era="1980s">
+      <div class="archive-item" data-index="0" onclick="openLightbox('1980s', 0)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-01.jpg" alt="Drew RFC early 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, early 1980s</div>
+      </div>
+      <div class="archive-item" data-index="1" onclick="openLightbox('1980s', 1)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-02.jpg" alt="Drew RFC early 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, early 1980s</div>
+      </div>
+      <div class="archive-item" data-index="2" onclick="openLightbox('1980s', 2)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-03.jpg" alt="Drew RFC early 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, early 1980s</div>
+      </div>
+      <div class="archive-item" data-index="3" onclick="openLightbox('1980s', 3)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-04.jpg" alt="Drew RFC early 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, early 1980s</div>
+      </div>
+      <div class="archive-item" data-index="4" onclick="openLightbox('1980s', 4)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-05.jpg" alt="Drew RFC early 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, early 1980s</div>
+      </div>
+      <div class="archive-item" data-index="5" onclick="openLightbox('1980s', 5)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-06.jpg" alt="Drew RFC early 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, early 1980s</div>
+      </div>
+      <div class="archive-item" data-index="6" onclick="openLightbox('1980s', 6)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-07.jpg" alt="Drew RFC ca 1985" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Yuki Uchida C85, Chris Van Cleef C85, Pat Caprigleone C82, ca 1985</div>
+      </div>
+      <div class="archive-item" data-index="7" onclick="openLightbox('1980s', 7)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-08.jpg" alt="Drew RFC ca 1985" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Tony Buttacavoli C82, ca early 1980s</div>
+      </div>
+      <div class="archive-item" data-index="8" onclick="openLightbox('1980s', 8)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-09.jpg" alt="Drew Rugby Ball Fall 1981" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Drew Rugby Ball — Fall of 1981</div>
+      </div>
+      <div class="archive-item" data-index="9" onclick="openLightbox('1980s', 9)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-10.jpg" alt="Drew RFC ca 1983" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Eric Sachs C82, Soc Deacon C82, Eric "Moon" Lutzger C82, Bryan Hennessy C82, Tony Buttacavoli C82, "Pub" Joe Krzys — ca 1983</div>
+      </div>
+      <div class="archive-item" data-index="10" onclick="openLightbox('1980s', 10)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-11.jpg" alt="Drew RFC 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, 1980s</div>
+      </div>
+      <div class="archive-item" data-index="11" onclick="openLightbox('1980s', 11)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-12.jpg" alt="Tony Buttacavoli ca 1981" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Tony Buttacavoli C82 bypassing Pat Caprigleone C82 with an outlet pass as Bill Hughes C81 looks on — ca 1981</div>
+      </div>
+      <div class="archive-item" data-index="12" onclick="openLightbox('1980s', 12)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-13.jpg" alt="Drew RFC 1981" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Brian Hennessy &amp; Michael Stearn, c. 1981</div>
+      </div>
+      <div class="archive-item" data-index="13" onclick="openLightbox('1980s', 13)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-14.jpg" alt="Drew RFC 1981" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Bill Bernhard, Andy Maidman &amp; Chris Walsh, 1981</div>
+      </div>
+      <div class="archive-item" data-index="14" onclick="openLightbox('1980s', 14)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-15.jpg" alt="Drew RFC 1981" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Drew RFC 1981</div>
+      </div>
+      <div class="archive-item" data-index="15" onclick="openLightbox('1980s', 15)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-16.jpg" alt="Chris Walsh C80 Spring 1980" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Chris Walsh C80 and Perry Walinski C80 figuring out the lineout — Spring 1980</div>
+      </div>
+      <div class="archive-item" data-index="16" onclick="openLightbox('1980s', 16)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-17.jpg" alt="Nils Osterberg C82" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Nils Osterberg C82 advancing the ball with Bill Landis C85, Chris Van Cleef C85</div>
+      </div>
+      <div class="archive-item" data-index="17" onclick="openLightbox('1980s', 17)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-18.jpg" alt="Drew RFC 1980" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Chris Walsh, Alumni Match, c. 1981; Chip Nolet C80, Pete Smith C80, c. 1979–1980</div>
+      </div>
+      <div class="archive-item" data-index="18" onclick="openLightbox('1980s', 18)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-19.jpg" alt="Drew RFC 1980" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, c. 1980</div>
+      </div>
+      <div class="archive-item" data-index="19" onclick="openLightbox('1980s', 19)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-20.jpg" alt="Drew RFC 1981-1982" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Drew Rugby Football Club, c. 1981–1982</div>
+      </div>
+      <div class="archive-item" data-index="20" onclick="openLightbox('1980s', 20)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-21.jpg" alt="Drew RFC 1981-1982" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Drew Rugby Football Club, c. 1981–1982</div>
+      </div>
+      <div class="archive-item" data-index="21" onclick="openLightbox('1980s', 21)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-22.jpg" alt="Ben Davol C82" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Ben Davol C82 highstepping toward goal, c. 1981–1983</div>
+      </div>
+      <div class="archive-item" data-index="22" onclick="openLightbox('1980s', 22)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-23.jpg" alt="Drew RFC 1982" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Augie Turner C82, Andy Maidman C82, Bill Bernhard C82, Pat Caprigleone C82, Bill Hughes C81 — c. 1982</div>
+      </div>
+      <div class="archive-item" data-index="23" onclick="openLightbox('1980s', 23)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-24.jpg" alt="Drew RFC 1981" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Andy Maidman C82, Eric Sachs C82, Ron Reede C81 — c. 1981</div>
+      </div>
+      <div class="archive-item" data-index="24" onclick="openLightbox('1980s', 24)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-25.jpg" alt="Drew RFC 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, 1980s</div>
+      </div>
+      <div class="archive-item" data-index="25" onclick="openLightbox('1980s', 25)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-26.jpg" alt="Chris Walsh C80 in the scrum" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Chris Walsh C80 in the middle of the scrum</div>
+      </div>
+      <div class="archive-item" data-index="26" onclick="openLightbox('1980s', 26)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-27.jpg" alt="Drew RFC 1980s" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">Drew RFC, 1980s</div>
+      </div>
+      <div class="archive-item" data-index="27" onclick="openLightbox('1980s', 27)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-28.jpg" alt="Killer Bs front row 1979-80" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">"Killer Bs" front row, 1979–80: Andus Baker C83, Chris Walsh C80, Bill Ehlers C82</div>
+      </div>
+      <div class="archive-item" data-index="28" onclick="openLightbox('1980s', 28)">
+        <div class="archive-thumb">
+          <img src="archive/archive-1980s-29.jpg" alt="Paul Cortellesi C84 and Chris Walsh C80 with President Baeninger" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Paul Cortellesi C84, Chris Walsh C80, and President Baeninger</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERA: ALUMNI -->
+  <section class="era-section" id="alumni">
+    <div class="era-header">
+      <div class="era-badge">2015 – 2022</div>
+      <div class="era-title">Alumni Era</div>
+      <div class="era-count">21 photos</div>
+    </div>
+    <div class="archive-grid" data-era="alumni">
+      <div class="archive-item" data-index="0" onclick="openLightbox('alumni', 0)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-01.jpg" alt="2016 Soc Deacon Memorial Alumni Match" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">2016 Umptyninth Annual Soc Deacon Memorial Alumni Rugby Match</div>
+      </div>
+      <div class="archive-item" data-index="1" onclick="openLightbox('alumni', 1)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-02.jpg" alt="2016 Soc Deacon Memorial Alumni Match" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">2016 Soc Deacon Memorial Alumni Match</div>
+      </div>
+      <div class="archive-item" data-index="2" onclick="openLightbox('alumni', 2)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-03.jpg" alt="DRFC 50th Anniversary" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">DRFC 50th Anniversary</div>
+      </div>
+      <div class="archive-item" data-index="3" onclick="openLightbox('alumni', 3)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-04.jpg" alt="Post 2015 alumni match" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Post 2015 alumni match — DRFC current players, alums, and Morris Masters</div>
+      </div>
+      <div class="archive-item" data-index="4" onclick="openLightbox('alumni', 4)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-05.jpg" alt="2016 DRFC Alumni Match" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">2016 DRFC Alumni Match</div>
+      </div>
+      <div class="archive-item" data-index="5" onclick="openLightbox('alumni', 5)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-06.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="6" onclick="openLightbox('alumni', 6)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-07.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="7" onclick="openLightbox('alumni', 7)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-08.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="8" onclick="openLightbox('alumni', 8)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-09.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="9" onclick="openLightbox('alumni', 9)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-10.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="10" onclick="openLightbox('alumni', 10)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-11.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="11" onclick="openLightbox('alumni', 11)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-12.jpg" alt="Chris Walsh C80 and Ralph Sorrentino C83 2017" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Chris Walsh C80, Ralph Sorrentino C83, Ralph Scoville C80, c. 2017</div>
+      </div>
+      <div class="archive-item" data-index="12" onclick="openLightbox('alumni', 12)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-13.jpg" alt="Paul Cortellesi C84 and Chris Walsh C80" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Paul Cortellesi C84 and Chris Walsh C80</div>
+      </div>
+      <div class="archive-item" data-index="13" onclick="openLightbox('alumni', 13)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-14.jpg" alt="Mickey Greene C79, Ben Davol C82, Chris Walsh C80" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Mickey Greene C79, Ben Davol (RIP) C82, Chris Walsh C80 — Penn Station, c. 2019</div>
+      </div>
+      <div class="archive-item" data-index="14" onclick="openLightbox('alumni', 14)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-15.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="15" onclick="openLightbox('alumni', 15)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-16.jpg" alt="Chris Walsh C80 and John Hinchcliff G69 Auckland 2011" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Chris Walsh C80 and John Hinchcliff G69 overlooking Auckland, NZ — 2011</div>
+      </div>
+      <div class="archive-item" data-index="16" onclick="openLightbox('alumni', 16)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-17.jpg" alt="DRFC Alumni Auckland 2011" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Ralph Scoville C80, Nalani Makana Tarrant C10, Chris Walsh C80, Kate Etcheverry C10, John Hinchcliff G69 — Auckland, 2011</div>
+      </div>
+      <div class="archive-item" data-index="17" onclick="openLightbox('alumni', 17)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-18.jpg" alt="Ralph Scoville, Chris Walsh, Ralph Sorrentino 2022" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption">Ralph Scoville C80, Chris Walsh C80, Ralph Sorrentino C83 — c. 2022</div>
+      </div>
+      <div class="archive-item" data-index="18" onclick="openLightbox('alumni', 18)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-19.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="19" onclick="openLightbox('alumni', 19)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-20.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+      <div class="archive-item" data-index="20" onclick="openLightbox('alumni', 20)">
+        <div class="archive-thumb">
+          <img src="archive/archive-alumni-21.jpg" alt="DRFC Alumni" loading="lazy" />
+          <div class="archive-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="archive-caption no-caption">DRFC Alumni</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" onclick="shiftLightbox(-1)" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="lightbox-next" onclick="shiftLightbox(1)" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-icon-col">
+    <span class="footer-icon-col-label">Connect</span>
+    <div class="footer-icon-group">
+      <a href="https://www.facebook.com/DrewRugby/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-square"></i>
+        <span class="tooltip">Facebook</span>
+      </a>
+      <a href="mailto:christopherwalsh@gmail.com" class="footer-icon-btn" aria-label="Email us">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="tooltip">christopherwalsh@gmail.com</span>
+      </a>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+    <a href="index.html">
+      <img src="DRFC-logo.png" alt="Drew RFC" style="width:52px;height:52px;object-fit:contain;" />
+    </a>
+    <div class="footer-tagline">Forged at Drew, Proven Everywhere.</div>
+  </div>
+  <div class="footer-icon-col">
+    <span class="footer-icon-col-label">Support</span>
+    <div class="footer-icon-group">
+      <a href="https://venmo.com/Christopher-Walsh-192" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Venmo">
+        <img src="Venmo-logo.png" alt="Venmo" />
+        <span class="tooltip">Venmo @Christopher-Walsh-192</span>
+      </a>
+      <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Donate via Zelle">
+        <img src="Zelle-Symbol.png" alt="Zelle" />
+        <span class="tooltip">Zelle 201-774-0666</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Build lightbox data from the DOM
+  const eraData = {};
+  document.querySelectorAll('.archive-grid').forEach(grid => {
+    const era = grid.dataset.era;
+    eraData[era] = Array.from(grid.querySelectorAll('.archive-item')).map(item => ({
+      src: item.querySelector('img').src,
+      caption: item.querySelector('.archive-caption').textContent.trim(),
+      noCaption: item.querySelector('.archive-caption').classList.contains('no-caption')
+    }));
+  });
+
+  let currentEra = null;
+  let currentIndex = 0;
+
+  function openLightbox(era, index) {
+    currentEra = era;
+    currentIndex = index;
+    renderLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeLightboxOnBg(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+
+  function shiftLightbox(dir) {
+    const items = eraData[currentEra];
+    currentIndex = (currentIndex + dir + items.length) % items.length;
+    renderLightbox();
+  }
+
+  function renderLightbox() {
+    const items = eraData[currentEra];
+    const item = items[currentIndex];
+    document.getElementById('lightbox-img').src = item.src;
+    document.getElementById('lightbox-img').alt = item.caption;
+    document.getElementById('lightbox-caption').textContent = item.noCaption ? '' : item.caption;
+    document.getElementById('lightbox-counter').textContent =
+      `${currentIndex + 1} / ${items.length}`;
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') shiftLightbox(-1);
+    if (e.key === 'ArrowRight') shiftLightbox(1);
+  });
+</script>
+
+</body>
+</html>
